@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.DS_Store
+.env
+
+# Raw HEIC originals (converted JPGs and thumbnails are committed)
+public/photos/*.heic
+public/photos/*.HEIC

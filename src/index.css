@@ -1,0 +1,746 @@
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --fg-muted: #555555;
+  --fg-faint: #767676;
+  --border: #e8e8e8;
+  --highlight-bg: #f7f7f7;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--fg-muted);
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  background: var(--highlight-bg);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+}
+
+/* ── App Layout ── */
+.app {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  position: relative;
+  width: 44px; /* collapsed: just the toggle */
+  flex-shrink: 0;
+  background: #1a1a1a;
+  color: #f0ede8;
+  overflow: hidden;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.sidebar-open {
+  width: 300px;
+  cursor: default;
+}
+
+.sidebar-header {
+  width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 16px;
+  margin-top: 5px;
+}
+
+.sidebar-toggle {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: #f0ede8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+
+.sidebar-toggle:hover {
+  opacity: 1;
+}
+
+.sidebar-toggle-icon {
+  font-size: 11px;
+}
+
+.sidebar-titlebar {
+  width: 300px;
+  flex-shrink: 0;
+  padding: 4px 20px 16px 20px;
+  opacity: 1;
+  transition: opacity 0.15s;
+}
+
+.sidebar:not(.sidebar-open) .sidebar-titlebar {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar-body {
+  width: 300px; /* fixed so content doesn't reflow during animation */
+  padding: 0 20px 32px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+  opacity: 1;
+  transition: opacity 0.15s;
+}
+
+.sidebar:not(.sidebar-open) .sidebar-body {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Hide scrollbar but keep scrollability */
+.sidebar-body::-webkit-scrollbar { width: 0; }
+
+
+.sidebar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #eb4034;
+  border: 1.5px solid #eb4034;
+  border-radius: 3px;
+  padding: 2px 6px;
+}
+
+.sidebar-badge--live::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #eb4034;
+  animation: sidebar-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes sidebar-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+.sidebar-title {
+  font-family: 'Caveat Variable', 'Caveat', cursive;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #f0ede8;
+  letter-spacing: -0.01em;
+}
+
+.sidebar-tagline {
+  font-size: 12px;
+  color: #888;
+  margin-top: 6px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── Sidebar Sections ── */
+.sidebar-section {
+  border-top: 1px solid #2e2e2e;
+  padding: 18px 0;
+}
+
+
+.sidebar-section-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.sidebar-desc {
+  font-size: 13px;
+  color: #bbb;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.sidebar-desc a {
+  color: #f0ede8;
+}
+
+.sidebar-footer {
+  width: 300px;
+  flex-shrink: 0;
+  margin-top: auto;
+  padding: 18px 20px 16px;
+  border-top: 1px solid #2e2e2e;
+  opacity: 1;
+  transition: opacity 0.15s;
+}
+
+.sidebar-footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-footer-links .sidebar-desc {
+  margin-bottom: 0;
+}
+
+.sidebar-github-link {
+  display: inline-flex;
+  color: #888;
+  transition: color 0.15s;
+}
+
+.sidebar-github-link:hover {
+  color: #fff;
+}
+
+.sidebar:not(.sidebar-open) .sidebar-footer {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ── Trip Legs ── */
+.trip-legs {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trip-leg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trip-leg-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.trip-leg-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #f0ede8;
+  line-height: 1.3;
+}
+
+.trip-leg-note {
+  font-size: 11.5px;
+  color: #888;
+  margin-top: 1px;
+  line-height: 1.4;
+}
+
+
+
+/* ── Trip Stats ── */
+.trip-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.trip-stat {
+  background: #242424;
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.trip-stat-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #f0ede8;
+  line-height: 1.2;
+}
+
+.trip-stat-label {
+  font-size: 11px;
+  color: #666;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ── Empty State ── */
+.empty-state {
+  padding: 24px;
+  color: var(--fg-muted);
+  font-size: 14px;
+}
+
+/* ── Full-page Map ── */
+.map-full {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-full .world-map {
+  height: 100%;
+  aspect-ratio: unset;
+}
+
+/* ── Photo Popup (appears on marker hover/click) ── */
+.map-photo-popup {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* ── World Map ── */
+.world-map {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 400 / 260;
+  /* Dark space background — the WebGL canvas clear color is transparent,
+     so this shows through in the corners outside the globe sphere. */
+  background: #0a0a1a;
+}
+
+.world-map .maplibregl-ctrl-attrib,
+.world-map .maplibregl-ctrl-logo { display: none !important; }
+
+.star-field {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.map-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* Wireframe globe */
+.loading-globe {
+  width: 130px;
+  height: 130px;
+}
+
+.gl-outline {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.7);
+  stroke-width: 0.8;
+}
+
+.gl-lat {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.3);
+  stroke-width: 0.6;
+}
+
+/* Each meridian: 12s cycle = 6s front (visible) + 6s back (hidden).
+   6 meridians staggered 2s apart → 60° spacing around the globe.
+   Appear stagger: fade in 0.15s after the previous. */
+.gl-mer {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.3);
+  stroke-width: 0.6;
+  vector-effect: non-scaling-stroke;
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: globe-spin 12s linear infinite, gl-mer-appear 0.3s ease-out forwards;
+  animation-delay: 0s, 0s;
+}
+.gl-mer-b { animation-delay: -2s,  0.15s; }
+.gl-mer-c { animation-delay: -4s,  0.30s; }
+.gl-mer-d { animation-delay: -6s,  0.45s; }
+.gl-mer-e { animation-delay: -8s,  0.60s; }
+.gl-mer-f { animation-delay: -10s, 0.75s; }
+
+@keyframes globe-spin {
+  /* Front hemisphere: sweep from edge → full face → edge */
+  0%   { transform: scaleX(0);    opacity: 0; }
+  2%   { transform: scaleX(0.05); opacity: 1; }
+  25%  { transform: scaleX(1);    opacity: 1; }
+  48%  { transform: scaleX(0.05); opacity: 1; }
+  50%  { transform: scaleX(0);    opacity: 0; }
+  /* Back hemisphere: hidden */
+  100% { transform: scaleX(0);    opacity: 0; }
+}
+
+@keyframes gl-mer-appear {
+  to { opacity: 1; }
+}
+
+.map-marker {
+  position: absolute;
+  pointer-events: none;
+}
+
+.map-marker-static {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.map-marker-pin {
+  width: var(--marker-size, 16px);
+  height: calc(var(--marker-size, 16px) * 1.33);
+  fill: #eb4034;
+  opacity: 0.85;
+  display: block;
+  transition: transform 0.15s, opacity 0.15s;
+  transform-origin: bottom center;
+}
+
+.map-marker-hovered .map-marker-pin,
+.map-marker-selected .map-marker-pin {
+  transform: scale(1.375);
+  opacity: 1;
+}
+
+@media (pointer: coarse) {
+  .map-marker-static::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(var(--marker-size, 16px) + 10px);
+    height: calc(var(--marker-size, 16px) * 1.33 + 10px);
+  }
+}
+
+.map-marker-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #eb4034;
+  opacity: 0.5;
+  animation: map-pulse 1.6s ease-out infinite;
+}
+
+@keyframes map-pulse {
+  0%   { width: 10px; height: 10px; opacity: 0; }
+  15%  { opacity: 0.5; }
+  100% { width: 28px; height: 28px; opacity: 0; }
+}
+
+/* ── Polaroid ── */
+.polaroid {
+  flex-shrink: 0;
+  width: 260px;
+  background: #f0ede8;
+  padding: 10px 10px 32px;
+  box-shadow: 2px 4px 16px rgba(0,0,0,0.12);
+  transform: rotate(var(--polaroid-rotate, 2deg));
+  transition: transform 0.25s ease;
+  container-type: inline-size;
+}
+
+
+.polaroid-media {
+  position: relative;
+  overflow: hidden;
+}
+
+.polaroid img,
+.polaroid-video {
+  width: 100%;
+  display: block;
+}
+
+.polaroid img {
+  transition: filter 0.4s ease, opacity 0.4s ease;
+}
+
+
+.polaroid-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8e0d4;
+  color: #b0a898;
+  transition: opacity 0.3s ease;
+}
+
+.polaroid-placeholder-fade {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.polaroid-img-loading,
+.polaroid-img-fading {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.polaroid-img-loading {
+  opacity: 0;
+}
+
+
+.polaroid-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.polaroid-video-playing {
+  opacity: 1;
+}
+
+.polaroid-has-meta {
+  padding-bottom: 10px;
+}
+
+.polaroid-meta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 6px;
+  font-family: 'Caveat Variable', 'Caveat', cursive;
+  line-height: 1.2;
+}
+
+.polaroid-location {
+  font-size: 9cqi;
+  font-weight: 500;
+  color: #888;
+}
+
+.polaroid-date {
+  font-size: 8cqi;
+  color: #888;
+}
+
+/* ── Day Timeline (sidebar) ── */
+.day-timeline {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+.day-timeline-row {
+  cursor: pointer;
+}
+
+.day-timeline-event {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 0 10px;
+  align-items: stretch;
+}
+
+.day-timeline-day {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #555;
+  text-align: center;
+  flex-shrink: 0;
+  position: relative;
+  isolation: isolate;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+}
+
+/* Red arrow tab on selected */
+.day-timeline-day::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: -8px;
+  right: -10px;
+  background: #eb4034;
+  clip-path: polygon(8px 0%, 100% 0%, 100% 100%, 8px 100%, 0% 50%);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.2s ease;
+}
+
+.day-timeline-event--active .day-timeline-day {
+  color: #fff;
+}
+
+.day-timeline-event--active .day-timeline-day::before {
+  transform: scaleX(1);
+}
+
+.day-timeline-line-content {
+  border-left: 1px solid #2e2e2e;
+  position: relative;
+  padding: 8px 0 8px 16px;
+}
+
+.day-timeline-dot {
+  position: absolute;
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #333;
+  border: 1.5px solid #1a1a1a;
+  outline: 1px solid #333;
+  transition: background 0.15s, outline-color 0.15s;
+}
+
+.day-timeline-event--active .day-timeline-dot {
+  background: #eb4034;
+  outline-color: #eb4034;
+}
+
+.day-timeline-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.day-timeline-title {
+  font-size: 13px;
+  color: #f0ede8;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.day-timeline-desc {
+  font-size: 11.5px;
+  color: #888;
+  line-height: 1.4;
+}
+
+.day-timeline-count {
+  font-size: 10.5px;
+  color: #555;
+  font-family: var(--mono);
+}
+
+/* ── Expanded polaroid overlay ── */
+.polaroid-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: overlayFadeIn 0.25s ease forwards;
+}
+
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.polaroid-overlay-close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.15s ease;
+}
+
+.polaroid-overlay-close:hover {
+  color: #fff;
+}
+
+.polaroid-expanded {
+  animation: polaroidExpand 0.35s cubic-bezier(0.34, 1.4, 0.64, 1) forwards;
+}
+
+.polaroid-expanded .polaroid {
+  /* Constrain by viewport width AND height so portrait photos don't overflow on short screens.
+     (90vh - 80px) = usable height minus polaroid top/bottom padding + meta area.
+     Multiplying by the photo aspect ratio (width/height) gives the max polaroid width
+     that keeps the photo fully visible vertically. */
+  width: min(480px, 85vw, calc((90vh - 80px) * var(--photo-aspect, 1.5)));
+}
+
+@keyframes polaroidExpand {
+  from {
+    opacity: 0;
+    transform: scale(0.25);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
