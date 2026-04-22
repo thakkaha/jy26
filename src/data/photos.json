@@ -8,5 +8,15 @@
     "width": 2048,
     "height": 1536,
     "location": "Monterey County, CA"
+  },
+  {
+    "file": "/photos/IMG_4665.jpeg",
+    "thumb": "/photos/IMG_4665.thumb.webp",
+    "lat": 37.799188888888885,
+    "lng": -119.86647777777777,
+    "datetime": "2025-06-28T19:56:47.000",
+    "width": 1536,
+    "height": 2048,
+    "location": "Tuolumne County, CA"
   }
 ]
