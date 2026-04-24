@@ -50,7 +50,10 @@ function DayTimeline({ dayGroups, selectedDay, onSelectDay }) {
                   {lastPhoto?.location && (
                     <div className="day-timeline-desc">{lastPhoto.location}</div>
                   )}
-                  <div className="day-timeline-count">{group.photos.length} photo{group.photos.length !== 1 ? 's' : ''}</div>
+                  <div className="day-timeline-count">
+                    {group.photos.length} photo{group.photos.length !== 1 ? 's' : ''}
+                    {dayDistances[i] > 0 ? ` · ${dayDistances[i]} km` : ''}
+                  </div>
                 </div>
               </div>
             </div>
@@ -238,8 +241,24 @@ const tripTime = (() => {
   return `${days}d ${hours}h`;
 })();
 
+function haversine(a, b) {
+  const R = 6371;
+  const dLat = (b.lat - a.lat) * Math.PI / 180;
+  const dLng = (b.lng - a.lng) * Math.PI / 180;
+  const x = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * Math.PI / 180) * Math.cos(b.lat * Math.PI / 180) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(x));
+}
+
 // Nearest route point index for each GPS photo
 const routePts = globalRoute[0] ?? [];
+const routeCumDist = (() => {
+  if (!routePts.length) return [];
+  const dist = [0];
+  for (let i = 1; i < routePts.length; i++)
+    dist.push(dist[i - 1] + haversine(routePts[i - 1], routePts[i]));
+  return dist;
+})();
+
 const photoRouteIndices = routePts.length
   ? gpsPhotos.map(p => {
       let best = 0, bestDist = Infinity;
@@ -248,6 +267,18 @@ const photoRouteIndices = routePts.length
         if (d < bestDist) { bestDist = d; best = i; }
       }
       return best;
+    })
+  : [];
+
+const dayDistances = routeCumDist.length && photoRouteIndices.length
+  ? dayGroups.map((_, i) => {
+      const startIdx = i > 0 ? lastPhotoIdx(i - 1) : dayGroups[i].firstPhotoIdx;
+      const endIdx = lastPhotoIdx(i);
+      const r0 = photoRouteIndices[startIdx];
+      const r1 = photoRouteIndices[endIdx];
+      const lo = Math.min(r0, r1);
+      const hi = Math.max(r0, r1);
+      return Math.round(routeCumDist[hi] - routeCumDist[lo]);
     })
   : [];
 
