@@ -40,12 +40,34 @@ async function downloadFile(drive, fileId, destPath) {
   await pipeline(res.data, createWriteStream(destPath));
 }
 
+// Inject the raw TIFF/EXIF block from a HEIC buffer into a JPEG as an APP1 segment.
+// heic-convert strips metadata during conversion; this restores it so process.js
+// can extract GPS and datetime from the resulting JPG as normal.
+function injectExif(jpegBuf, heicBuf) {
+  const II = Buffer.from([0x49, 0x49, 0x2a, 0x00]); // little-endian TIFF
+  const MM = Buffer.from([0x4d, 0x4d, 0x00, 0x2a]); // big-endian TIFF
+  const offLE = heicBuf.indexOf(II);
+  const offBE = heicBuf.indexOf(MM);
+  if (offLE === -1 && offBE === -1) return jpegBuf;
+  const tiffOff = offLE !== -1 && (offBE === -1 || offLE < offBE) ? offLE : offBE;
+  // APP1 length field is 2 bytes (max 65535), subtract 2 for the field itself and 6 for "Exif\0\0"
+  const tiffData = heicBuf.slice(tiffOff, tiffOff + 65527);
+  const app1 = Buffer.alloc(2 + 2 + 6 + tiffData.length);
+  app1[0] = 0xFF; app1[1] = 0xE1;                     // APP1 marker
+  app1.writeUInt16BE(2 + 6 + tiffData.length, 2);      // segment length (includes itself)
+  app1.write('Exif\x00\x00', 4, 'ascii');
+  tiffData.copy(app1, 10);
+  // Insert after SOI (first 2 bytes of JPEG)
+  return Buffer.concat([jpegBuf.slice(0, 2), app1, jpegBuf.slice(2)]);
+}
+
 async function downloadHeicAsJpg(drive, fileId, destPath) {
   const res = await drive.files.get({ fileId, alt: 'media' }, { responseType: 'stream' });
   const chunks = [];
   for await (const chunk of res.data) chunks.push(chunk);
-  const jpgBuf = await heicConvert({ buffer: Buffer.concat(chunks), format: 'JPEG', quality: 0.9 });
-  await writeFile(destPath, Buffer.from(jpgBuf));
+  const heicBuf = Buffer.concat(chunks);
+  const jpgBuf = await heicConvert({ buffer: heicBuf, format: 'JPEG', quality: 0.9 });
+  await writeFile(destPath, injectExif(Buffer.from(jpgBuf), heicBuf));
 }
 
 // Returns the local filename to use for a Drive file (HEIC → JPG rename)
