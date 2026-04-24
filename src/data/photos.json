@@ -38,5 +38,15 @@
     "width": 4000,
     "height": 3000,
     "location": "Sarnia, ON"
+  },
+  {
+    "file": "/photos/IMG_5189 Copy.JPG",
+    "thumb": "/photos/IMG_5189 Copy.thumb.webp",
+    "lat": 42.99879722222222,
+    "lng": -82.42296666666667,
+    "datetime": "2026-04-24T15:00:06.000",
+    "width": 5712,
+    "height": 3570,
+    "location": "Port Huron, MI"
   }
 ]
