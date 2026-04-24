@@ -88,5 +88,15 @@
     "width": 4032,
     "height": 3024,
     "location": "Shiawassee Township, MI"
+  },
+  {
+    "file": "/photos/IMG_5206.jpg",
+    "thumb": "/photos/IMG_5206.thumb.webp",
+    "lat": null,
+    "lng": null,
+    "datetime": "2026-04-24T22:31:52",
+    "width": 4032,
+    "height": 3024,
+    "location": null
   }
 ]
