@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "file": "/photos/20260424_103537.jpg",
+    "thumb": "/photos/20260424_103537.thumb.webp",
+    "lat": 43.645257199999996,
+    "lng": -79.38091599972222,
+    "datetime": "2026-04-24T10:35:37.000",
+    "width": 4000,
+    "height": 3000,
+    "location": "Toronto, ON"
+  },
+  {
+    "file": "/photos/20260424_113214.jpg",
+    "thumb": "/photos/20260424_113214.thumb.webp",
+    "lat": 43.64017919972222,
+    "lng": -79.38508749972223,
+    "datetime": "2026-04-24T11:32:14.000",
+    "width": 4000,
+    "height": 3000,
+    "location": "Toronto, ON"
+  },
+  {
+    "file": "/photos/20260424_121138.jpg",
+    "thumb": "/photos/20260424_121138.thumb.webp",
+    "lat": 43.570239299722225,
+    "lng": -79.60296499972222,
+    "datetime": "2026-04-24T12:11:38.000",
+    "width": 3000,
+    "height": 4000,
+    "location": "Mississauga, ON"
+  }
+]
