@@ -88,5 +88,15 @@
     "width": 4032,
     "height": 3024,
     "location": "Shiawassee Township, MI"
+  },
+  {
+    "file": "/photos/IMG_5206.jpg",
+    "thumb": "/photos/IMG_5206.thumb.webp",
+    "lat": 42.30502222222222,
+    "lng": -84.99574166666667,
+    "datetime": "2026-04-24T17:57:12.000",
+    "width": 4032,
+    "height": 3024,
+    "location": "Marshall Township, MI"
   }
 ]
