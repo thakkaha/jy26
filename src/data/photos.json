@@ -100,11 +100,41 @@
     "location": "Chicago, IL"
   },
   {
+    "file": "/photos/IMG_6738.jpg",
+    "thumb": "/photos/IMG_6738.thumb.webp",
+    "lat": 41.888283333333334,
+    "lng": -87.62182499999999,
+    "datetime": "2026-04-24T21:57:37.000",
+    "width": 3024,
+    "height": 4032,
+    "location": "Chicago, IL"
+  },
+  {
+    "file": "/photos/IMG_6748.jpg",
+    "thumb": "/photos/IMG_6748.thumb.webp",
+    "lat": 41.84546944444445,
+    "lng": -87.63376666666667,
+    "datetime": "2026-04-24T23:48:03.000",
+    "width": 4032,
+    "height": 3024,
+    "location": "Chicago, IL"
+  },
+  {
+    "file": "/photos/IMG_6764.jpg",
+    "thumb": "/photos/IMG_6764.thumb.webp",
+    "lat": 42.15049722222222,
+    "lng": -87.86459444444444,
+    "datetime": "2026-04-25T11:15:22.000",
+    "width": 4032,
+    "height": 3024,
+    "location": "Deerfield, IL"
+  },
+  {
     "file": "/photos/IMG_5179.jpg",
     "thumb": "/photos/IMG_5179.thumb.webp",
     "lat": 43.170452777777776,
     "lng": -80.21499722222222,
-    "datetime": "2026-04-25T18:28:01",
+    "datetime": "2026-04-25T18:35:30",
     "width": 5712,
     "height": 4284,
     "location": "Brantford, ON"
@@ -114,7 +144,7 @@
     "thumb": "/photos/IMG_5181.thumb.webp",
     "lat": 42.99442222222223,
     "lng": -82.28009166666666,
-    "datetime": "2026-04-25T18:28:01",
+    "datetime": "2026-04-25T18:35:30",
     "width": 5712,
     "height": 4284,
     "location": "Sarnia, ON"
@@ -124,7 +154,7 @@
     "thumb": "/photos/IMG_5203.thumb.webp",
     "lat": 42.896225,
     "lng": -84.08914166666666,
-    "datetime": "2026-04-25T18:28:01",
+    "datetime": "2026-04-25T18:35:30",
     "width": 4032,
     "height": 3024,
     "location": "Shiawassee Township, MI"
@@ -134,7 +164,7 @@
     "thumb": "/photos/IMG_6689.thumb.webp",
     "lat": 43.63900833333333,
     "lng": -79.38498611111112,
-    "datetime": "2026-04-25T18:28:02",
+    "datetime": "2026-04-25T18:35:30",
     "width": 3024,
     "height": 4032,
     "location": "Toronto, ON"
