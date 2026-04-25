@@ -189,14 +189,15 @@ async function main() {
     process.stdout.write(`  ${file} ... `);
 
     const cached = metaCache[file];
-    // If we have a fully cached entry (has GPS or was confirmed no-GPS), skip EXIF extraction
     const hasCachedMeta = cached && (cached.lat != null || cached.datetime != null);
 
-    let entry;
+    // Always call processImage to regenerate the thumbnail with current orientation.
+    // Fall back to cached GPS/datetime so values aren't lost when EXIF can't be
+    // re-extracted (e.g. datetime was captured from mtime on a previous run).
+    let entry = await processImage(file);
     if (hasCachedMeta) {
-      entry = { ...cached };
-    } else {
-      entry = await processImage(file);
+      if (entry.lat == null && cached.lat != null) { entry.lat = cached.lat; entry.lng = cached.lng; }
+      if (!entry.datetime && cached.datetime) entry.datetime = cached.datetime;
     }
 
     // Reverse geocode if GPS is available; use cache to skip re-fetching
@@ -214,8 +215,7 @@ async function main() {
 
     const gpsStr = entry.lat != null ? (entry.location ?? `${entry.lat.toFixed(4)}, ${entry.lng.toFixed(4)}`) : 'no GPS';
     const dtStr = entry.datetime ?? 'no datetime';
-    const source = hasCachedMeta ? '(cached)' : '';
-    console.log(`✓  (${gpsStr} | ${dtStr}) ${source}`.trimEnd());
+    console.log(`✓  (${gpsStr} | ${dtStr})`);
     results.push(entry);
   }
 
