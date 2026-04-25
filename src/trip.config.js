@@ -10,7 +10,7 @@ export const TRIP_DISTANCE_KM   = 6000; // estimated total trip distance (for pr
 
 // Changes the description in the sidebar, has no effect on the actual route
 export const TRIP_LEGS = [
-  { icon: '🚗', label: 'Waterloo → Chicago' },
+  { icon: '🚗', label: 'Toronto → Chicago' },
   { icon: '🛣️', label: 'Chicago → LA', note: 'via Historic Route 66' },
   { icon: '🌊', label: 'LA → San Francisco', note: 'via the Pacific Coast Highway' },
 ];
