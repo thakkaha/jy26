@@ -178,5 +178,15 @@
     "width": 3000,
     "height": 4000,
     "location": "Chicago, IL"
+  },
+  {
+    "file": "/photos/IMG_5402.jpg",
+    "thumb": "/photos/IMG_5402.thumb.webp",
+    "lat": 41.879525,
+    "lng": -87.62593888888888,
+    "datetime": "2026-04-25T14:34:17.000",
+    "width": 4284,
+    "height": 5712,
+    "location": "Chicago, IL"
   }
 ]
