@@ -168,5 +168,15 @@
     "width": 4032,
     "height": 3024,
     "location": "Deerfield, IL"
+  },
+  {
+    "file": "/photos/20260425_135820.jpg",
+    "thumb": "/photos/20260425_135820.thumb.webp",
+    "lat": 41.890280527777776,
+    "lng": -87.61371605833332,
+    "datetime": "2026-04-25T13:58:20.000",
+    "width": 3000,
+    "height": 4000,
+    "location": "Chicago, IL"
   }
 ]
