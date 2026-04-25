@@ -98,5 +98,45 @@
     "width": 4032,
     "height": 3024,
     "location": "Marshall Township, MI"
+  },
+  {
+    "file": "/photos/IMG_5209.jpg",
+    "thumb": "/photos/IMG_5209.thumb.webp",
+    "lat": 41.590472222222225,
+    "lng": -87.23352777777778,
+    "datetime": "2026-04-24T18:54:23.000",
+    "width": 4032,
+    "height": 3024,
+    "location": "Lake Station, IN"
+  },
+  {
+    "file": "/photos/20260424_191329.jpg",
+    "thumb": "/photos/20260424_191329.thumb.webp",
+    "lat": 41.688010299999995,
+    "lng": -87.5217152,
+    "datetime": "2026-04-24T19:13:29.000",
+    "width": 3000,
+    "height": 4000,
+    "location": "Hammond, IN"
+  },
+  {
+    "file": "/photos/IMG_5233.jpg",
+    "thumb": "/photos/IMG_5233.thumb.webp",
+    "lat": 41.733983333333335,
+    "lng": -87.56358333333333,
+    "datetime": "2026-04-24T19:17:20.000",
+    "width": 4032,
+    "height": 3024,
+    "location": "Chicago, IL"
+  },
+  {
+    "file": "/photos/IMG_5247.jpg",
+    "thumb": "/photos/IMG_5247.thumb.webp",
+    "lat": 41.82996666666667,
+    "lng": -87.64605,
+    "datetime": "2026-04-24T19:30:18.000",
+    "width": 5712,
+    "height": 4284,
+    "location": "Chicago, IL"
   }
 ]
