@@ -40,6 +40,26 @@ async function downloadFile(drive, fileId, destPath) {
   await pipeline(res.data, createWriteStream(destPath));
 }
 
+// Reset the Orientation tag in a TIFF buffer to 1 (normal).
+// heic-convert physically rotates pixels during decoding, so the orientation
+// is already baked in — leaving the original tag causes a double rotation.
+function resetOrientation(tiffBuf) {
+  const isLE = tiffBuf[0] === 0x49; // 'II' = little-endian, 'MM' = big-endian
+  const read16 = off => isLE ? tiffBuf.readUInt16LE(off) : tiffBuf.readUInt16BE(off);
+  const read32 = off => isLE ? tiffBuf.readUInt32LE(off) : tiffBuf.readUInt32BE(off);
+  const write16 = (off, val) => isLE ? tiffBuf.writeUInt16LE(val, off) : tiffBuf.writeUInt16BE(val, off);
+  const ifd0Off = read32(4);
+  const entryCount = read16(ifd0Off);
+  for (let i = 0; i < entryCount; i++) {
+    const e = ifd0Off + 2 + i * 12;
+    if (read16(e) === 0x0112) { // Orientation tag
+      write16(e + 8, 1); // value = 1 (normal/no rotation)
+      write16(e + 10, 0);
+      break;
+    }
+  }
+}
+
 // Inject the raw TIFF/EXIF block from a HEIC buffer into a JPEG as an APP1 segment.
 // heic-convert strips metadata during conversion; this restores it so process.js
 // can extract GPS and datetime from the resulting JPG as normal.
@@ -51,7 +71,8 @@ function injectExif(jpegBuf, heicBuf) {
   if (offLE === -1 && offBE === -1) return jpegBuf;
   const tiffOff = offLE !== -1 && (offBE === -1 || offLE < offBE) ? offLE : offBE;
   // APP1 length field is 2 bytes (max 65535), subtract 2 for the field itself and 6 for "Exif\0\0"
-  const tiffData = heicBuf.slice(tiffOff, tiffOff + 65527);
+  const tiffData = Buffer.from(heicBuf.slice(tiffOff, tiffOff + 65527)); // copy before mutating
+  resetOrientation(tiffData);
   const app1 = Buffer.alloc(2 + 2 + 6 + tiffData.length);
   app1[0] = 0xFF; app1[1] = 0xE1;                     // APP1 marker
   app1.writeUInt16BE(2 + 6 + tiffData.length, 2);      // segment length (includes itself)
