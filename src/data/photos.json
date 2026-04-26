@@ -178,5 +178,15 @@
     "width": 5712,
     "height": 4284,
     "location": "Springfield, MO"
+  },
+  {
+    "file": "/photos/IMG_5561.jpg",
+    "thumb": "/photos/IMG_5561.thumb.webp",
+    "lat": 37.18501944444444,
+    "lng": -93.5051888888889,
+    "datetime": "2026-04-26T12:47:58.000",
+    "width": 5712,
+    "height": 4284,
+    "location": "Greene County, MO"
   }
 ]
