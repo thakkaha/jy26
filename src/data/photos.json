@@ -188,5 +188,15 @@
     "width": 5712,
     "height": 4284,
     "location": "Greene County, MO"
+  },
+  {
+    "file": "/photos/IMG_5577.jpg",
+    "thumb": "/photos/IMG_5577.thumb.webp",
+    "lat": 36.62741944444444,
+    "lng": -95.19911111111111,
+    "datetime": "2026-04-26T14:15:42.000",
+    "width": 4284,
+    "height": 5712,
+    "location": "Vinita, OK"
   }
 ]
