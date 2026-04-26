@@ -220,6 +220,16 @@
     "location": "Saint Louis, MO"
   },
   {
+    "file": "/photos/IMG_5491.jpg",
+    "thumb": "/photos/IMG_5491.thumb.webp",
+    "lat": 38.62363333333333,
+    "lng": -90.18573888888889,
+    "datetime": "2026-04-25T22:44:13.000",
+    "width": 3024,
+    "height": 4032,
+    "location": "Saint Louis, MO"
+  },
+  {
     "file": "/photos/20260425_224552.jpg",
     "thumb": "/photos/20260425_224552.thumb.webp",
     "lat": 38.62385569972222,
@@ -258,5 +268,15 @@
     "width": 4032,
     "height": 3024,
     "location": "Rolla, MO"
+  },
+  {
+    "file": "/photos/IMG_5545.jpg",
+    "thumb": "/photos/IMG_5545.thumb.webp",
+    "lat": 37.24271388888889,
+    "lng": -93.26140555555556,
+    "datetime": "2026-04-26T03:46:45.000",
+    "width": 5712,
+    "height": 4284,
+    "location": "Springfield, MO"
   }
 ]
