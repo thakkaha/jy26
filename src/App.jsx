@@ -310,6 +310,7 @@ export default function App() {
   const [selectedDay, setSelectedDay] = useState(null);
   const boundsRef = useRef(null);
   const zoomRef = useRef(5);
+  const overlayRef = useRef(null);
 
   const highlightRoute = useMemo(() => highlightForDay(selectedDay), [selectedDay]);
 
@@ -323,6 +324,28 @@ export default function App() {
       document.head.appendChild(link);
     });
   }, []);
+
+  useEffect(() => {
+    if (expandedPhoto) overlayRef.current?.focus();
+  }, [expandedPhoto]);
+
+  useEffect(() => {
+    if (!expandedPhoto) return;
+    const idx = gpsPhotos.indexOf(expandedPhoto);
+    const handleKey = (e) => {
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        if (idx < gpsPhotos.length - 1) setExpandedPhoto(gpsPhotos[idx + 1]);
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        if (idx > 0) setExpandedPhoto(gpsPhotos[idx - 1]);
+      } else if (e.key === 'Escape') {
+        setExpandedPhoto(null);
+      }
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [expandedPhoto]);
 
   const activePhoto = hoveredPhoto;
   const popupPos = activePhoto && boundsRef.current?.project ? (() => {
@@ -385,35 +408,47 @@ export default function App() {
                 />
               </div>
             )}
-            {expandedPhoto && (
-              <div
-                className="polaroid-overlay"
-                onClick={() => setExpandedPhoto(null)}
-              >
-                <button
-                  className="polaroid-overlay-close"
-                  onClick={() => setExpandedPhoto(null)}
-                  aria-label="Close"
-                >✕</button>
-                <div
-                  className="polaroid-expanded"
-                  style={expandedPhoto.width && expandedPhoto.height ? { '--photo-aspect': expandedPhoto.width / expandedPhoto.height } : undefined}
-                  onClick={e => e.stopPropagation()}
-                >
-                  <Polaroid
-                    src={expandedPhoto.file}
-                    thumb={expandedPhoto.thumb}
-                    w={expandedPhoto.width}
-                    h={expandedPhoto.height}
-                    date={formatDate(expandedPhoto.datetime)}
-                    location={expandedPhoto.location ?? null}
-                    rotate={expandedPhoto._rotate}
-                    color
-                    tack={false}
-                  />
+            {expandedPhoto && (() => {
+              const idx = gpsPhotos.indexOf(expandedPhoto);
+              const hasPrev = idx > 0;
+              const hasNext = idx < gpsPhotos.length - 1;
+              return (
+                <div className="polaroid-overlay" ref={overlayRef} tabIndex={-1} onClick={() => setExpandedPhoto(null)}>
+                  <button className="polaroid-overlay-close" onClick={() => setExpandedPhoto(null)} aria-label="Close">✕</button>
+                  <div className="polaroid-overlay-inner" onClick={e => e.stopPropagation()}>
+                    <button
+                      className="polaroid-nav polaroid-nav-prev"
+                      onClick={() => hasPrev && setExpandedPhoto(gpsPhotos[idx - 1])}
+                      aria-label="Previous photo"
+                      disabled={!hasPrev}
+                    ><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+                    <div
+                      key={expandedPhoto.file}
+                      className="polaroid-expanded"
+                      style={expandedPhoto.width && expandedPhoto.height ? { '--photo-aspect': expandedPhoto.width / expandedPhoto.height } : undefined}
+                    >
+                      <Polaroid
+                        src={expandedPhoto.file}
+                        thumb={expandedPhoto.thumb}
+                        w={expandedPhoto.width}
+                        h={expandedPhoto.height}
+                        date={formatDate(expandedPhoto.datetime)}
+                        location={expandedPhoto.location ?? null}
+                        rotate={expandedPhoto._rotate}
+                        color
+                        tack={false}
+                      />
+                    </div>
+                    <button
+                      className="polaroid-nav polaroid-nav-next"
+                      onClick={() => hasNext && setExpandedPhoto(gpsPhotos[idx + 1])}
+                      aria-label="Next photo"
+                      disabled={!hasNext}
+                    ><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+                  </div>
                 </div>
-              </div>
-            )}
+              );
+            })()}
           </>
         )}
       </div>
