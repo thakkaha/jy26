@@ -208,5 +208,35 @@
     "width": 5712,
     "height": 4284,
     "location": "Saint Louis, MO"
+  },
+  {
+    "file": "/photos/20260425_224341.jpg",
+    "thumb": "/photos/20260425_224341.thumb.webp",
+    "lat": 38.6236429,
+    "lng": -90.1857684,
+    "datetime": "2026-04-25T22:43:42.000",
+    "width": 3000,
+    "height": 4000,
+    "location": "Saint Louis, MO"
+  },
+  {
+    "file": "/photos/20260425_224552.jpg",
+    "thumb": "/photos/20260425_224552.thumb.webp",
+    "lat": 38.62385569972222,
+    "lng": -90.18544939972223,
+    "datetime": "2026-04-25T22:45:53.000",
+    "width": 4000,
+    "height": 3000,
+    "location": "Saint Louis, MO"
+  },
+  {
+    "file": "/photos/IMG_5514.jpg",
+    "thumb": "/photos/IMG_5514.thumb.webp",
+    "lat": 38.566624999999995,
+    "lng": -90.41729722222223,
+    "datetime": "2026-04-25T23:46:10.000",
+    "width": 5712,
+    "height": 4284,
+    "location": "Kirkwood, MO"
   }
 ]
