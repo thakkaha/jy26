@@ -188,5 +188,15 @@
     "width": 4284,
     "height": 5712,
     "location": "Chicago, IL"
+  },
+  {
+    "file": "/photos/IMG_5451.jpg",
+    "thumb": "/photos/IMG_5451.thumb.webp",
+    "lat": 40.51778888888889,
+    "lng": -88.97403055555556,
+    "datetime": "2026-04-25T19:37:23.000",
+    "width": 5712,
+    "height": 4284,
+    "location": "Normal, IL"
   }
 ]
