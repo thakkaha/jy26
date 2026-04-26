@@ -238,5 +238,25 @@
     "width": 5712,
     "height": 4284,
     "location": "Kirkwood, MO"
+  },
+  {
+    "file": "/photos/IMG_5525.jpg",
+    "thumb": "/photos/IMG_5525.thumb.webp",
+    "lat": 37.94268333333333,
+    "lng": -91.79125277777777,
+    "datetime": "2026-04-26T02:02:35.000",
+    "width": 4284,
+    "height": 5712,
+    "location": "Rolla, MO"
+  },
+  {
+    "file": "/photos/IMG_5538.jpg",
+    "thumb": "/photos/IMG_5538.thumb.webp",
+    "lat": 37.95697777777778,
+    "lng": -91.78511944444445,
+    "datetime": "2026-04-26T02:13:42.000",
+    "width": 4032,
+    "height": 3024,
+    "location": "Rolla, MO"
   }
 ]
