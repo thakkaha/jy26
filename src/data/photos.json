@@ -198,5 +198,15 @@
     "width": 5712,
     "height": 4284,
     "location": "Normal, IL"
+  },
+  {
+    "file": "/photos/IMG_5483.jpg",
+    "thumb": "/photos/IMG_5483.thumb.webp",
+    "lat": 38.62515277777778,
+    "lng": -90.18908611111111,
+    "datetime": "2026-04-25T22:32:05.000",
+    "width": 5712,
+    "height": 4284,
+    "location": "Saint Louis, MO"
   }
 ]
