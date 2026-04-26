@@ -1,27 +1,7 @@
 [
   {
-    "file": "/photos/20260424_103537.jpg",
-    "thumb": "/photos/20260424_103537.thumb.webp",
-    "lat": 43.645257199999996,
-    "lng": -79.38091599972222,
-    "datetime": "2026-04-24T10:35:37.000",
-    "width": 4000,
-    "height": 3000,
-    "location": "Toronto, ON"
-  },
-  {
-    "file": "/photos/IMG_6689.jpg",
-    "thumb": "/photos/IMG_6689.thumb.webp",
-    "lat": 43.63900833333333,
-    "lng": -79.38498611111112,
-    "datetime": "2026-04-24T11:19:59.000",
-    "width": 3024,
-    "height": 4032,
-    "location": "Toronto, ON"
-  },
-  {
-    "file": "/photos/20260424_113214.jpg",
-    "thumb": "/photos/20260424_113214.thumb.webp",
+    "file": "/photos/Copy of 20260424_113214.jpg",
+    "thumb": "/photos/Copy of 20260424_113214.thumb.webp",
     "lat": 43.64017919972222,
     "lng": -79.38508749972223,
     "datetime": "2026-04-24T11:32:14.000",
@@ -30,8 +10,8 @@
     "location": "Toronto, ON"
   },
   {
-    "file": "/photos/20260424_121138.jpg",
-    "thumb": "/photos/20260424_121138.thumb.webp",
+    "file": "/photos/Copy of 20260424_121138.jpg",
+    "thumb": "/photos/Copy of 20260424_121138.thumb.webp",
     "lat": 43.570239299722225,
     "lng": -79.60296499972222,
     "datetime": "2026-04-24T12:11:38.000",
@@ -40,8 +20,8 @@
     "location": "Mississauga, ON"
   },
   {
-    "file": "/photos/IMG_5179.jpg",
-    "thumb": "/photos/IMG_5179.thumb.webp",
+    "file": "/photos/Copy of IMG_5179.jpg",
+    "thumb": "/photos/Copy of IMG_5179.thumb.webp",
     "lat": 43.170452777777776,
     "lng": -80.21499722222222,
     "datetime": "2026-04-24T13:20:53.000",
@@ -50,18 +30,8 @@
     "location": "Brantford, ON"
   },
   {
-    "file": "/photos/IMG_5181.jpg",
-    "thumb": "/photos/IMG_5181.thumb.webp",
-    "lat": 42.99442222222223,
-    "lng": -82.28009166666666,
-    "datetime": "2026-04-24T14:52:40.000",
-    "width": 5712,
-    "height": 4284,
-    "location": "Sarnia, ON"
-  },
-  {
-    "file": "/photos/20260424_145616.jpg",
-    "thumb": "/photos/20260424_145616.thumb.webp",
+    "file": "/photos/Copy of 20260424_145616.jpg",
+    "thumb": "/photos/Copy of 20260424_145616.thumb.webp",
     "lat": 42.9870347,
     "lng": -82.37293349999999,
     "datetime": "2026-04-24T14:56:16.000",
@@ -70,8 +40,8 @@
     "location": "Sarnia, ON"
   },
   {
-    "file": "/photos/IMG_5189 Copy.JPG",
-    "thumb": "/photos/IMG_5189 Copy.thumb.webp",
+    "file": "/photos/Copy of IMG_5189 Copy.JPG",
+    "thumb": "/photos/Copy of IMG_5189 Copy.thumb.webp",
     "lat": 42.99879722222222,
     "lng": -82.42296666666667,
     "datetime": "2026-04-24T15:00:06.000",
@@ -80,18 +50,8 @@
     "location": "Port Huron, MI"
   },
   {
-    "file": "/photos/IMG_5203.jpg",
-    "thumb": "/photos/IMG_5203.thumb.webp",
-    "lat": 42.896225,
-    "lng": -84.08914166666666,
-    "datetime": "2026-04-24T16:48:35.000",
-    "width": 4032,
-    "height": 3024,
-    "location": "Shiawassee Township, MI"
-  },
-  {
-    "file": "/photos/IMG_5206.jpg",
-    "thumb": "/photos/IMG_5206.thumb.webp",
+    "file": "/photos/Copy of IMG_5206.jpg",
+    "thumb": "/photos/Copy of IMG_5206.thumb.webp",
     "lat": 42.30502222222222,
     "lng": -84.99574166666667,
     "datetime": "2026-04-24T17:57:12.000",
@@ -100,28 +60,8 @@
     "location": "Marshall Township, MI"
   },
   {
-    "file": "/photos/IMG_5209.jpg",
-    "thumb": "/photos/IMG_5209.thumb.webp",
-    "lat": 41.590472222222225,
-    "lng": -87.23352777777778,
-    "datetime": "2026-04-24T18:54:23.000",
-    "width": 4032,
-    "height": 3024,
-    "location": "Lake Station, IN"
-  },
-  {
-    "file": "/photos/20260424_191329.jpg",
-    "thumb": "/photos/20260424_191329.thumb.webp",
-    "lat": 41.688010299999995,
-    "lng": -87.5217152,
-    "datetime": "2026-04-24T19:13:29.000",
-    "width": 3000,
-    "height": 4000,
-    "location": "Hammond, IN"
-  },
-  {
-    "file": "/photos/IMG_5233.jpg",
-    "thumb": "/photos/IMG_5233.thumb.webp",
+    "file": "/photos/Copy of IMG_5233.jpg",
+    "thumb": "/photos/Copy of IMG_5233.thumb.webp",
     "lat": 41.733983333333335,
     "lng": -87.56358333333333,
     "datetime": "2026-04-24T19:17:20.000",
@@ -130,8 +70,8 @@
     "location": "Chicago, IL"
   },
   {
-    "file": "/photos/IMG_5247.jpg",
-    "thumb": "/photos/IMG_5247.thumb.webp",
+    "file": "/photos/Copy of IMG_5247.jpg",
+    "thumb": "/photos/Copy of IMG_5247.thumb.webp",
     "lat": 41.82996666666667,
     "lng": -87.64605,
     "datetime": "2026-04-24T19:30:18.000",
@@ -140,8 +80,8 @@
     "location": "Chicago, IL"
   },
   {
-    "file": "/photos/IMG_6738.jpg",
-    "thumb": "/photos/IMG_6738.thumb.webp",
+    "file": "/photos/Copy of IMG_6738.jpg",
+    "thumb": "/photos/Copy of IMG_6738.thumb.webp",
     "lat": 41.888283333333334,
     "lng": -87.62182499999999,
     "datetime": "2026-04-24T21:57:37.000",
@@ -150,8 +90,8 @@
     "location": "Chicago, IL"
   },
   {
-    "file": "/photos/IMG_6748.jpg",
-    "thumb": "/photos/IMG_6748.thumb.webp",
+    "file": "/photos/Copy of IMG_6748.jpg",
+    "thumb": "/photos/Copy of IMG_6748.thumb.webp",
     "lat": 41.84546944444445,
     "lng": -87.63376666666667,
     "datetime": "2026-04-24T23:48:03.000",
@@ -160,18 +100,8 @@
     "location": "Chicago, IL"
   },
   {
-    "file": "/photos/IMG_6764.jpg",
-    "thumb": "/photos/IMG_6764.thumb.webp",
-    "lat": 42.15049722222222,
-    "lng": -87.86459444444444,
-    "datetime": "2026-04-25T11:15:22.000",
-    "width": 4032,
-    "height": 3024,
-    "location": "Deerfield, IL"
-  },
-  {
-    "file": "/photos/20260425_135820.jpg",
-    "thumb": "/photos/20260425_135820.thumb.webp",
+    "file": "/photos/Copy of 20260425_135820.jpg",
+    "thumb": "/photos/Copy of 20260425_135820.thumb.webp",
     "lat": 41.890280527777776,
     "lng": -87.61371605833332,
     "datetime": "2026-04-25T13:58:20.000",
@@ -180,8 +110,8 @@
     "location": "Chicago, IL"
   },
   {
-    "file": "/photos/IMG_5402.jpg",
-    "thumb": "/photos/IMG_5402.thumb.webp",
+    "file": "/photos/Copy of IMG_5402.jpg",
+    "thumb": "/photos/Copy of IMG_5402.thumb.webp",
     "lat": 41.879525,
     "lng": -87.62593888888888,
     "datetime": "2026-04-25T14:34:17.000",
@@ -190,8 +120,8 @@
     "location": "Chicago, IL"
   },
   {
-    "file": "/photos/IMG_5451.jpg",
-    "thumb": "/photos/IMG_5451.thumb.webp",
+    "file": "/photos/Copy of IMG_5451.jpg",
+    "thumb": "/photos/Copy of IMG_5451.thumb.webp",
     "lat": 40.51778888888889,
     "lng": -88.97403055555556,
     "datetime": "2026-04-25T19:37:23.000",
@@ -200,28 +130,8 @@
     "location": "Normal, IL"
   },
   {
-    "file": "/photos/IMG_5483.jpg",
-    "thumb": "/photos/IMG_5483.thumb.webp",
-    "lat": 38.62515277777778,
-    "lng": -90.18908611111111,
-    "datetime": "2026-04-25T22:32:05.000",
-    "width": 5712,
-    "height": 4284,
-    "location": "Saint Louis, MO"
-  },
-  {
-    "file": "/photos/20260425_224341.jpg",
-    "thumb": "/photos/20260425_224341.thumb.webp",
-    "lat": 38.6236429,
-    "lng": -90.1857684,
-    "datetime": "2026-04-25T22:43:42.000",
-    "width": 3000,
-    "height": 4000,
-    "location": "Saint Louis, MO"
-  },
-  {
-    "file": "/photos/IMG_5491.jpg",
-    "thumb": "/photos/IMG_5491.thumb.webp",
+    "file": "/photos/Copy of IMG_5491.jpg",
+    "thumb": "/photos/Copy of IMG_5491.thumb.webp",
     "lat": 38.62363333333333,
     "lng": -90.18573888888889,
     "datetime": "2026-04-25T22:44:13.000",
@@ -230,18 +140,8 @@
     "location": "Saint Louis, MO"
   },
   {
-    "file": "/photos/20260425_224552.jpg",
-    "thumb": "/photos/20260425_224552.thumb.webp",
-    "lat": 38.62385569972222,
-    "lng": -90.18544939972223,
-    "datetime": "2026-04-25T22:45:53.000",
-    "width": 4000,
-    "height": 3000,
-    "location": "Saint Louis, MO"
-  },
-  {
-    "file": "/photos/IMG_5514.jpg",
-    "thumb": "/photos/IMG_5514.thumb.webp",
+    "file": "/photos/Copy of IMG_5514.jpg",
+    "thumb": "/photos/Copy of IMG_5514.thumb.webp",
     "lat": 38.566624999999995,
     "lng": -90.41729722222223,
     "datetime": "2026-04-25T23:46:10.000",
@@ -250,8 +150,8 @@
     "location": "Kirkwood, MO"
   },
   {
-    "file": "/photos/IMG_5525.jpg",
-    "thumb": "/photos/IMG_5525.thumb.webp",
+    "file": "/photos/Copy of IMG_5525.jpg",
+    "thumb": "/photos/Copy of IMG_5525.thumb.webp",
     "lat": 37.94268333333333,
     "lng": -91.79125277777777,
     "datetime": "2026-04-26T02:02:35.000",
@@ -260,8 +160,8 @@
     "location": "Rolla, MO"
   },
   {
-    "file": "/photos/IMG_5538.jpg",
-    "thumb": "/photos/IMG_5538.thumb.webp",
+    "file": "/photos/Copy of IMG_5538.jpg",
+    "thumb": "/photos/Copy of IMG_5538.thumb.webp",
     "lat": 37.95697777777778,
     "lng": -91.78511944444445,
     "datetime": "2026-04-26T02:13:42.000",
@@ -270,8 +170,8 @@
     "location": "Rolla, MO"
   },
   {
-    "file": "/photos/IMG_5545.jpg",
-    "thumb": "/photos/IMG_5545.thumb.webp",
+    "file": "/photos/Copy of IMG_5545.jpg",
+    "thumb": "/photos/Copy of IMG_5545.thumb.webp",
     "lat": 37.24271388888889,
     "lng": -93.26140555555556,
     "datetime": "2026-04-26T03:46:45.000",
