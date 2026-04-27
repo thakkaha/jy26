@@ -208,5 +208,15 @@
     "width": 5712,
     "height": 4284,
     "location": "Clinton, OK"
+  },
+  {
+    "file": "/photos/IMG_5675 Copy.JPG",
+    "thumb": "/photos/IMG_5675 Copy.thumb.webp",
+    "lat": 35.22715,
+    "lng": -99.99986944444444,
+    "datetime": "2026-04-27T17:05:16.000",
+    "width": 1098,
+    "height": 924,
+    "location": "Texola, OK"
   }
 ]
