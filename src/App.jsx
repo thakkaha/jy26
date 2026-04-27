@@ -107,16 +107,36 @@ function Sidebar({ open, onToggle, selectedDay, onSelectDay, distanceKm, tripTim
 
         {distanceKm && (
           <section className="sidebar-section">
-            <h2 className="sidebar-section-title">Trip Stats</h2>
-            <div className="trip-stats">
-              {/* <div className="trip-stat">
-                <div className="trip-stat-value">{tripTime ?? '—'}</div>
-                <div className="trip-stat-label">Trip Time</div>
+            <div className="trip-stat trip-stat--progress">
+              <div className="trip-stat-progress-header">
+                <span className="trip-stat-value">{distanceKm?.toLocaleString()} km</span>
+                <span className="trip-stat-progress-target">est. {TRIP_DISTANCE_KM.toLocaleString()} km</span>
               </div>
-              <div className="trip-stat">
-                <div className="trip-stat-value">{photoCount}</div>
-                <div className="trip-stat-label">Photos</div>
-              </div> */}
+              <div className="trip-stat-progress-bar">
+                <div
+                  className="trip-stat-progress-fill"
+                  style={{ width: `${Math.min(100, (distanceKm / TRIP_DISTANCE_KM) * 100)}%` }}
+                />
+              </div>
+              <div className="trip-stat-label">Distance Covered</div>
+            </div>
+          </section>
+        )}
+
+        {dayGroups.length > 0 && (
+          <section className="sidebar-section">
+            <h2 className="sidebar-section-title">Day-to-day Timeline</h2>
+            <DayTimeline
+              dayGroups={dayGroups}
+              selectedDay={selectedDay}
+              onSelectDay={onSelectDay}
+            />
+          </section>
+        )}
+
+        {distanceKm && (
+          <section className="sidebar-section">
+            <div className="trip-stats">
               <div className="trip-stat">
                 <div className="trip-stat-value">{statesVisited || '—'}</div>
                 <div className="trip-stat-label">States / Provinces</div>
@@ -125,31 +145,7 @@ function Sidebar({ open, onToggle, selectedDay, onSelectDay, distanceKm, tripTim
                 <div className="trip-stat-value">{citiesVisited || '—'}</div>
                 <div className="trip-stat-label">Cities</div>
               </div>
-              <div className="trip-stat trip-stat--progress">
-                <div className="trip-stat-progress-header">
-                  <span className="trip-stat-value">{distanceKm?.toLocaleString()} km</span>
-                  <span className="trip-stat-progress-target">est. {TRIP_DISTANCE_KM.toLocaleString()} km</span>
-                </div>
-                <div className="trip-stat-progress-bar">
-                  <div
-                    className="trip-stat-progress-fill"
-                    style={{ width: `${Math.min(100, (distanceKm / TRIP_DISTANCE_KM) * 100)}%` }}
-                  />
-                </div>
-                <div className="trip-stat-label">Distance Covered</div>
-              </div>
             </div>
-          </section>
-        )}
-
-        {dayGroups.length > 0 && (
-          <section className="sidebar-section">
-            <h2 className="sidebar-section-title">Generated Timeline</h2>
-            <DayTimeline
-              dayGroups={dayGroups}
-              selectedDay={selectedDay}
-              onSelectDay={onSelectDay}
-            />
           </section>
         )}
 
