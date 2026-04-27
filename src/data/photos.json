@@ -188,5 +188,15 @@
     "width": 5712,
     "height": 4284,
     "location": "Tulsa, OK"
+  },
+  {
+    "file": "/photos/IMG_5635.jpg",
+    "thumb": "/photos/IMG_5635.thumb.webp",
+    "lat": 35.48278888888889,
+    "lng": -97.75996388888889,
+    "datetime": "2026-04-27T13:13:14.000",
+    "width": 5712,
+    "height": 4284,
+    "location": "Yukon, OK"
   }
 ]
