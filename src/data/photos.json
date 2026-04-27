@@ -198,5 +198,15 @@
     "width": 5712,
     "height": 4284,
     "location": "Yukon, OK"
+  },
+  {
+    "file": "/photos/IMG_5653.jpg",
+    "thumb": "/photos/IMG_5653.thumb.webp",
+    "lat": 35.50612777777778,
+    "lng": -98.9869,
+    "datetime": "2026-04-27T15:48:55.000",
+    "width": 5712,
+    "height": 4284,
+    "location": "Clinton, OK"
   }
 ]
