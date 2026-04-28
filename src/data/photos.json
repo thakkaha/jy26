@@ -218,5 +218,15 @@
     "width": 1098,
     "height": 924,
     "location": "Texola, OK"
+  },
+  {
+    "file": "/photos/IMG_5707.jpg",
+    "thumb": "/photos/IMG_5707.thumb.webp",
+    "lat": 35.192099999999996,
+    "lng": -101.72354166666666,
+    "datetime": "2026-04-27T18:52:33.000",
+    "width": 4032,
+    "height": 3024,
+    "location": "Amarillo, TX"
   }
 ]
