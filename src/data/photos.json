@@ -228,5 +228,15 @@
     "width": 4032,
     "height": 3024,
     "location": "Amarillo, TX"
+  },
+  {
+    "file": "/photos/IMG_5755.jpg",
+    "thumb": "/photos/IMG_5755.thumb.webp",
+    "lat": 35.17183055555555,
+    "lng": -103.7162388888889,
+    "datetime": "2026-04-27T21:27:56.000",
+    "width": 4032,
+    "height": 3024,
+    "location": "Tucumcari, NM"
   }
 ]
