@@ -238,5 +238,35 @@
     "width": 4032,
     "height": 3024,
     "location": "Tucumcari, NM"
+  },
+  {
+    "file": "/photos/IMG_5863.jpg",
+    "thumb": "/photos/IMG_5863.thumb.webp",
+    "lat": 35.02734722222222,
+    "lng": -107.33546388888888,
+    "datetime": "2026-04-28T14:35:31.000",
+    "width": 4032,
+    "height": 3024,
+    "location": "Mesita, NM"
+  },
+  {
+    "file": "/photos/IMG_6057.jpg",
+    "thumb": "/photos/IMG_6057.thumb.webp",
+    "lat": 35.083869444444446,
+    "lng": -109.78887222222222,
+    "datetime": "2026-04-28T16:56:28.000",
+    "width": 4032,
+    "height": 3024,
+    "location": "Apache County, AZ"
+  },
+  {
+    "file": "/photos/IMG_5995 Copy.JPG",
+    "thumb": "/photos/IMG_5995 Copy.thumb.webp",
+    "lat": 35.352672222222225,
+    "lng": -109.05698333333333,
+    "datetime": "2026-04-28T17:02:04.000",
+    "width": 1555,
+    "height": 1089,
+    "location": "Lupton, AZ"
   }
 ]
