@@ -4,7 +4,7 @@
     "thumb": "/photos/Copy of 20260424_113214.thumb.webp",
     "lat": 43.64017919972222,
     "lng": -79.38508749972223,
-    "datetime": "2026-04-24T11:32:14.000",
+    "datetime": "2026-04-24T15:32:14.000Z",
     "width": 4000,
     "height": 3000,
     "location": "Toronto, ON"
@@ -14,7 +14,7 @@
     "thumb": "/photos/Copy of 20260424_121138.thumb.webp",
     "lat": 43.570239299722225,
     "lng": -79.60296499972222,
-    "datetime": "2026-04-24T12:11:38.000",
+    "datetime": "2026-04-24T16:11:38.000Z",
     "width": 3000,
     "height": 4000,
     "location": "Mississauga, ON"
@@ -24,7 +24,7 @@
     "thumb": "/photos/Copy of IMG_5179.thumb.webp",
     "lat": 43.170452777777776,
     "lng": -80.21499722222222,
-    "datetime": "2026-04-24T13:20:53.000",
+    "datetime": "2026-04-24T17:20:52Z",
     "width": 5712,
     "height": 4284,
     "location": "Brantford, ON"
@@ -34,7 +34,7 @@
     "thumb": "/photos/Copy of 20260424_145616.thumb.webp",
     "lat": 42.9870347,
     "lng": -82.37293349999999,
-    "datetime": "2026-04-24T14:56:16.000",
+    "datetime": "2026-04-24T18:56:16.000Z",
     "width": 4000,
     "height": 3000,
     "location": "Sarnia, ON"
@@ -44,7 +44,7 @@
     "thumb": "/photos/Copy of IMG_5189 Copy.thumb.webp",
     "lat": 42.99879722222222,
     "lng": -82.42296666666667,
-    "datetime": "2026-04-24T15:00:06.000",
+    "datetime": "2026-04-24T19:00:06Z",
     "width": 5712,
     "height": 3570,
     "location": "Port Huron, MI"
@@ -54,7 +54,7 @@
     "thumb": "/photos/Copy of IMG_5206.thumb.webp",
     "lat": 42.30502222222222,
     "lng": -84.99574166666667,
-    "datetime": "2026-04-24T17:57:12.000",
+    "datetime": "2026-04-24T21:57:11Z",
     "width": 4032,
     "height": 3024,
     "location": "Marshall Township, MI"
@@ -64,7 +64,7 @@
     "thumb": "/photos/Copy of IMG_5233.thumb.webp",
     "lat": 41.733983333333335,
     "lng": -87.56358333333333,
-    "datetime": "2026-04-24T19:17:20.000",
+    "datetime": "2026-04-25T00:17:19Z",
     "width": 4032,
     "height": 3024,
     "location": "Chicago, IL"
@@ -74,7 +74,7 @@
     "thumb": "/photos/Copy of IMG_5247.thumb.webp",
     "lat": 41.82996666666667,
     "lng": -87.64605,
-    "datetime": "2026-04-24T19:30:18.000",
+    "datetime": "2026-04-25T00:30:17Z",
     "width": 4284,
     "height": 5712,
     "location": "Chicago, IL"
@@ -84,7 +84,7 @@
     "thumb": "/photos/Copy of IMG_6738.thumb.webp",
     "lat": 41.888283333333334,
     "lng": -87.62182499999999,
-    "datetime": "2026-04-24T21:57:37.000",
+    "datetime": "2026-04-25T02:57:36Z",
     "width": 3024,
     "height": 4032,
     "location": "Chicago, IL"
@@ -94,7 +94,7 @@
     "thumb": "/photos/Copy of 20260425_135820.thumb.webp",
     "lat": 41.890280527777776,
     "lng": -87.61371605833332,
-    "datetime": "2026-04-25T13:58:20.000",
+    "datetime": "2026-04-25T18:58:20.000Z",
     "width": 3000,
     "height": 4000,
     "location": "Chicago, IL"
@@ -104,7 +104,7 @@
     "thumb": "/photos/Copy of IMG_5402.thumb.webp",
     "lat": 41.879525,
     "lng": -87.62593888888888,
-    "datetime": "2026-04-25T14:34:17.000",
+    "datetime": "2026-04-25T19:34:17Z",
     "width": 4284,
     "height": 5712,
     "location": "Chicago, IL"
@@ -114,7 +114,7 @@
     "thumb": "/photos/Copy of IMG_5451.thumb.webp",
     "lat": 40.51778888888889,
     "lng": -88.97403055555556,
-    "datetime": "2026-04-25T19:37:23.000",
+    "datetime": "2026-04-26T00:37:23Z",
     "width": 5712,
     "height": 4284,
     "location": "Normal, IL"
@@ -124,7 +124,7 @@
     "thumb": "/photos/Copy of IMG_5491.thumb.webp",
     "lat": 38.62363333333333,
     "lng": -90.18573888888889,
-    "datetime": "2026-04-25T22:44:13.000",
+    "datetime": "2026-04-26T03:44:09Z",
     "width": 3024,
     "height": 4032,
     "location": "Saint Louis, MO"
@@ -134,7 +134,7 @@
     "thumb": "/photos/Copy of IMG_5525.thumb.webp",
     "lat": 37.94268333333333,
     "lng": -91.79125277777777,
-    "datetime": "2026-04-26T02:02:35.000",
+    "datetime": "2026-04-26T07:02:33Z",
     "width": 4284,
     "height": 5712,
     "location": "Rolla, MO"
@@ -144,7 +144,7 @@
     "thumb": "/photos/Copy of IMG_5538.thumb.webp",
     "lat": 37.95697777777778,
     "lng": -91.78511944444445,
-    "datetime": "2026-04-26T02:13:42.000",
+    "datetime": "2026-04-26T07:13:37Z",
     "width": 4032,
     "height": 3024,
     "location": "Rolla, MO"
@@ -154,7 +154,7 @@
     "thumb": "/photos/Copy of IMG_5545.thumb.webp",
     "lat": 37.24271388888889,
     "lng": -93.26140555555556,
-    "datetime": "2026-04-26T03:46:45.000",
+    "datetime": "2026-04-26T08:46:45Z",
     "width": 5712,
     "height": 4284,
     "location": "Springfield, MO"
@@ -164,7 +164,7 @@
     "thumb": "/photos/IMG_5561.thumb.webp",
     "lat": 37.18501944444444,
     "lng": -93.5051888888889,
-    "datetime": "2026-04-26T12:47:58.000",
+    "datetime": "2026-04-26T17:47:57Z",
     "width": 5712,
     "height": 4284,
     "location": "Greene County, MO"
@@ -174,7 +174,7 @@
     "thumb": "/photos/IMG_5577.thumb.webp",
     "lat": 36.62741944444444,
     "lng": -95.19911111111111,
-    "datetime": "2026-04-26T14:15:42.000",
+    "datetime": "2026-04-26T19:15:42Z",
     "width": 4284,
     "height": 5712,
     "location": "Vinita, OK"
@@ -184,7 +184,7 @@
     "thumb": "/photos/IMG_5626.thumb.webp",
     "lat": 36.147666666666666,
     "lng": -95.97502777777778,
-    "datetime": "2026-04-26T17:59:35.000",
+    "datetime": "2026-04-26T22:59:34Z",
     "width": 5712,
     "height": 4284,
     "location": "Tulsa, OK"
@@ -194,7 +194,7 @@
     "thumb": "/photos/IMG_5635.thumb.webp",
     "lat": 35.48278888888889,
     "lng": -97.75996388888889,
-    "datetime": "2026-04-27T13:13:14.000",
+    "datetime": "2026-04-27T18:13:11Z",
     "width": 5712,
     "height": 4284,
     "location": "Yukon, OK"
@@ -204,7 +204,7 @@
     "thumb": "/photos/IMG_5653.thumb.webp",
     "lat": 35.50612777777778,
     "lng": -98.9869,
-    "datetime": "2026-04-27T15:48:55.000",
+    "datetime": "2026-04-27T20:48:53Z",
     "width": 5712,
     "height": 4284,
     "location": "Clinton, OK"
@@ -214,7 +214,7 @@
     "thumb": "/photos/IMG_5675 Copy.thumb.webp",
     "lat": 35.22715,
     "lng": -99.99986944444444,
-    "datetime": "2026-04-27T17:05:16.000",
+    "datetime": "2026-04-27T22:05:15Z",
     "width": 1098,
     "height": 924,
     "location": "Texola, OK"
@@ -224,7 +224,7 @@
     "thumb": "/photos/IMG_5707.thumb.webp",
     "lat": 35.192099999999996,
     "lng": -101.72354166666666,
-    "datetime": "2026-04-27T18:52:33.000",
+    "datetime": "2026-04-27T23:52:33Z",
     "width": 4032,
     "height": 3024,
     "location": "Amarillo, TX"
@@ -234,7 +234,7 @@
     "thumb": "/photos/IMG_5755.thumb.webp",
     "lat": 35.17183055555555,
     "lng": -103.7162388888889,
-    "datetime": "2026-04-27T21:27:56.000",
+    "datetime": "2026-04-28T03:27:56Z",
     "width": 4032,
     "height": 3024,
     "location": "Tucumcari, NM"
@@ -244,29 +244,29 @@
     "thumb": "/photos/IMG_5863.thumb.webp",
     "lat": 35.02734722222222,
     "lng": -107.33546388888888,
-    "datetime": "2026-04-28T14:35:31.000",
+    "datetime": "2026-04-28T20:35:30Z",
     "width": 4032,
     "height": 3024,
     "location": "Mesita, NM"
-  },
-  {
-    "file": "/photos/IMG_6057.jpg",
-    "thumb": "/photos/IMG_6057.thumb.webp",
-    "lat": 35.083869444444446,
-    "lng": -109.78887222222222,
-    "datetime": "2026-04-28T16:56:28.000",
-    "width": 4032,
-    "height": 3024,
-    "location": "Apache County, AZ"
   },
   {
     "file": "/photos/IMG_5995 Copy.JPG",
     "thumb": "/photos/IMG_5995 Copy.thumb.webp",
     "lat": 35.352672222222225,
     "lng": -109.05698333333333,
-    "datetime": "2026-04-28T17:02:04.000",
+    "datetime": "2026-04-28T23:02:04Z",
     "width": 1555,
     "height": 1089,
     "location": "Lupton, AZ"
+  },
+  {
+    "file": "/photos/IMG_6057.jpg",
+    "thumb": "/photos/IMG_6057.thumb.webp",
+    "lat": 35.083869444444446,
+    "lng": -109.78887222222222,
+    "datetime": "2026-04-28T23:56:28Z",
+    "width": 4032,
+    "height": 3024,
+    "location": "Apache County, AZ"
   }
 ]

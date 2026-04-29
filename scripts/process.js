@@ -101,9 +101,39 @@ async function processImage(file) {
     if (exif) {
       lat = exif.latitude ?? null;
       lng = exif.longitude ?? null;
-      const dt = exif.DateTimeOriginal ?? exif.CreateDate ?? null;
-      if (dt instanceof Date) {
-        datetime = dt.toISOString().replace('Z', '');
+
+      // Prefer GPS timestamp (true UTC from the GPS receiver) over DateTimeOriginal
+      // (camera local time with no timezone info, which breaks ordering across timezone boundaries).
+      const gpsDate = exif.GPSDateStamp ?? exif.GPSDate ?? null;
+      const gpsTime = exif.GPSTimeStamp ?? null;
+      if (gpsDate && gpsTime) {
+        const isoDate = (typeof gpsDate === 'string' ? gpsDate : new Date(gpsDate).toISOString().slice(0, 10))
+          .replace(/:/g, '-').slice(0, 10);
+        let timeStr;
+        if (typeof gpsTime === 'string') {
+          const parts = gpsTime.split(':');
+          timeStr = `${parts[0].padStart(2, '0')}:${parts[1].padStart(2, '0')}:${String(Math.floor(parseFloat(parts[2]))).padStart(2, '0')}`;
+        } else if (Array.isArray(gpsTime)) {
+          const pad = n => String(Math.floor(n)).padStart(2, '0');
+          timeStr = `${pad(gpsTime[0])}:${pad(gpsTime[1])}:${pad(gpsTime[2])}`;
+        }
+        if (timeStr) datetime = `${isoDate}T${timeStr}Z`;
+      }
+      if (!datetime) {
+        const dt = exif.DateTimeOriginal ?? exif.CreateDate ?? null;
+        if (dt instanceof Date) {
+          // exifr parses DateTimeOriginal (local time) as if it were UTC since EXIF has no tz.
+          // OffsetTimeOriginal, if present, lets us convert the local time to real UTC.
+          const offsetStr = exif.OffsetTimeOriginal ?? exif.OffsetTime ?? null;
+          const match = offsetStr?.match(/([+-])(\d{2}):(\d{2})/);
+          if (match) {
+            const sign = match[1] === '+' ? 1 : -1;
+            const offsetMs = sign * (parseInt(match[2]) * 60 + parseInt(match[3])) * 60000;
+            datetime = new Date(dt.getTime() - offsetMs).toISOString().slice(0, -1) + 'Z';
+          } else {
+            datetime = dt.toISOString().replace('Z', '');
+          }
+        }
       }
     }
   } catch {}
