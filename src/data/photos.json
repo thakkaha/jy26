@@ -268,5 +268,15 @@
     "width": 1555,
     "height": 1089,
     "location": "Lupton, AZ"
+  },
+  {
+    "file": "/photos/IMG_6313.jpg",
+    "thumb": "/photos/IMG_6313.thumb.webp",
+    "lat": 35.19237777777777,
+    "lng": -111.66183333333333,
+    "datetime": "2026-04-29T12:59:20.000",
+    "width": 4032,
+    "height": 3024,
+    "location": "Flagstaff, AZ"
   }
 ]
