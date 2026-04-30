@@ -278,5 +278,35 @@
     "width": 4032,
     "height": 3024,
     "location": "Flagstaff, AZ"
+  },
+  {
+    "file": "/photos/IMG_6349.jpg",
+    "thumb": "/photos/IMG_6349.thumb.webp",
+    "lat": 35.32548055555556,
+    "lng": -112.86945277777777,
+    "datetime": "2026-04-29T21:22:52Z",
+    "width": 3024,
+    "height": 4032,
+    "location": "Seligman, AZ"
+  },
+  {
+    "file": "/photos/IMG_6536.jpg",
+    "thumb": "/photos/IMG_6536.thumb.webp",
+    "lat": 35.04673888888889,
+    "lng": -114.36463888888888,
+    "datetime": "2026-04-30T01:14:54Z",
+    "width": 4032,
+    "height": 3024,
+    "location": "Mohave County, AZ"
+  },
+  {
+    "file": "/photos/IMG_6613.jpg",
+    "thumb": "/photos/IMG_6613.thumb.webp",
+    "lat": 35.025616666666664,
+    "lng": -114.38289722222221,
+    "datetime": "2026-04-30T02:11:54Z",
+    "width": 4032,
+    "height": 3024,
+    "location": "Oatman, AZ"
   }
 ]
