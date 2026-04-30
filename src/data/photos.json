@@ -318,5 +318,15 @@
     "width": 5712,
     "height": 4284,
     "location": "Needles, CA"
+  },
+  {
+    "file": "/photos/IMG_6702.jpg",
+    "thumb": "/photos/IMG_6702.thumb.webp",
+    "lat": 34.83640277777778,
+    "lng": -114.60032777777778,
+    "datetime": "2026-04-30T17:56:02Z",
+    "width": 4032,
+    "height": 3024,
+    "location": "Needles, CA"
   }
 ]
