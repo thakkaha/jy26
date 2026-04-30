@@ -308,5 +308,15 @@
     "width": 4032,
     "height": 3024,
     "location": "Oatman, AZ"
+  },
+  {
+    "file": "/photos/IMG_6684.jpg",
+    "thumb": "/photos/IMG_6684.thumb.webp",
+    "lat": 34.850902777777776,
+    "lng": -114.62316944444444,
+    "datetime": "2026-04-30T03:20:11Z",
+    "width": 5712,
+    "height": 4284,
+    "location": "Needles, CA"
   }
 ]
