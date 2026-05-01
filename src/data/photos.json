@@ -368,5 +368,15 @@
     "width": 4032,
     "height": 3024,
     "location": "Los Angeles, CA"
+  },
+  {
+    "file": "/photos/IMG_6925.jpg",
+    "thumb": "/photos/IMG_6925.thumb.webp",
+    "lat": 34.00973888888889,
+    "lng": -118.4971861111111,
+    "datetime": "2026-05-01T03:03:17Z",
+    "width": 4284,
+    "height": 5712,
+    "location": "Santa Monica, CA"
   }
 ]
