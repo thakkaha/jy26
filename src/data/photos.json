@@ -280,11 +280,11 @@
     "location": "Flagstaff, AZ"
   },
   {
-    "file": "/photos/IMG_6349.jpg",
-    "thumb": "/photos/IMG_6349.thumb.webp",
-    "lat": 35.32548055555556,
-    "lng": -112.86945277777777,
-    "datetime": "2026-04-29T21:22:52Z",
+    "file": "/photos/IMG_6348.jpg",
+    "thumb": "/photos/IMG_6348.thumb.webp",
+    "lat": 35.32545555555556,
+    "lng": -112.86931666666666,
+    "datetime": "2026-04-29T21:22:51Z",
     "width": 3024,
     "height": 4032,
     "location": "Seligman, AZ"
@@ -338,5 +338,35 @@
     "width": 4032,
     "height": 3024,
     "location": null
+  },
+  {
+    "file": "/photos/IMG_6820.jpg",
+    "thumb": "/photos/IMG_6820.thumb.webp",
+    "lat": 34.427391666666665,
+    "lng": -117.17259166666668,
+    "datetime": "2026-04-30T22:48:06Z",
+    "width": 3024,
+    "height": 4032,
+    "location": "San Bernardino County, CA"
+  },
+  {
+    "file": "/photos/IMG_6843.jpg",
+    "thumb": "/photos/IMG_6843.thumb.webp",
+    "lat": 34.32533333333334,
+    "lng": -117.45493333333333,
+    "datetime": "2026-04-30T23:20:42Z",
+    "width": 4032,
+    "height": 3024,
+    "location": "San Bernardino County, CA"
+  },
+  {
+    "file": "/photos/IMG_6885.jpg",
+    "thumb": "/photos/IMG_6885.thumb.webp",
+    "lat": 34.02905,
+    "lng": -118.22727222222223,
+    "datetime": "2026-05-01T01:00:48Z",
+    "width": 4032,
+    "height": 3024,
+    "location": "Los Angeles, CA"
   }
 ]
