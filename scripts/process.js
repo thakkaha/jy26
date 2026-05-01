@@ -71,7 +71,7 @@ async function processImage(file) {
   const thumbName = `${base}.thumb.webp`;
   const thumbPath = path.join(DUMP_DIR, thumbName);
 
-  let lat = null, lng = null, datetime = null, width = null, height = null;
+  let lat = null, lng = null, datetime = null, localDate = null, width = null, height = null;
 
   // Extract EXIF from the original file
   try {
@@ -102,6 +102,14 @@ async function processImage(file) {
       lat = exif.latitude ?? null;
       lng = exif.longitude ?? null;
 
+      // DateTimeOriginal is local camera time; exifr returns it as a Date treating the
+      // local value as UTC (no timezone in EXIF). Slicing its ISO string gives the
+      // camera-local date, which is what the timeline should group by.
+      const dtOriginal = exif.DateTimeOriginal ?? exif.CreateDate ?? null;
+      if (dtOriginal instanceof Date) {
+        localDate = dtOriginal.toISOString().slice(0, 10);
+      }
+
       // Prefer GPS timestamp (true UTC from the GPS receiver) over DateTimeOriginal
       // (camera local time with no timezone info, which breaks ordering across timezone boundaries).
       const gpsDate = exif.GPSDateStamp ?? exif.GPSDate ?? null;
@@ -119,20 +127,17 @@ async function processImage(file) {
         }
         if (timeStr) datetime = `${isoDate}T${timeStr}Z`;
       }
-      if (!datetime) {
-        const dt = exif.DateTimeOriginal ?? exif.CreateDate ?? null;
-        if (dt instanceof Date) {
-          // exifr parses DateTimeOriginal (local time) as if it were UTC since EXIF has no tz.
-          // OffsetTimeOriginal, if present, lets us convert the local time to real UTC.
-          const offsetStr = exif.OffsetTimeOriginal ?? exif.OffsetTime ?? null;
-          const match = offsetStr?.match(/([+-])(\d{2}):(\d{2})/);
-          if (match) {
-            const sign = match[1] === '+' ? 1 : -1;
-            const offsetMs = sign * (parseInt(match[2]) * 60 + parseInt(match[3])) * 60000;
-            datetime = new Date(dt.getTime() - offsetMs).toISOString().slice(0, -1) + 'Z';
-          } else {
-            datetime = dt.toISOString().replace('Z', '');
-          }
+      if (!datetime && dtOriginal instanceof Date) {
+        // exifr parses DateTimeOriginal (local time) as if it were UTC since EXIF has no tz.
+        // OffsetTimeOriginal, if present, lets us convert the local time to real UTC.
+        const offsetStr = exif.OffsetTimeOriginal ?? exif.OffsetTime ?? null;
+        const match = offsetStr?.match(/([+-])(\d{2}):(\d{2})/);
+        if (match) {
+          const sign = match[1] === '+' ? 1 : -1;
+          const offsetMs = sign * (parseInt(match[2]) * 60 + parseInt(match[3])) * 60000;
+          datetime = new Date(dtOriginal.getTime() - offsetMs).toISOString().slice(0, -1) + 'Z';
+        } else {
+          datetime = dtOriginal.toISOString().replace('Z', '');
         }
       }
     }
@@ -168,6 +173,7 @@ async function processImage(file) {
     lat,
     lng,
     datetime,
+    localDate,
     width,
     height,
   };

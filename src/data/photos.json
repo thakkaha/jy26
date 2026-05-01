@@ -5,6 +5,7 @@
     "lat": 43.64017919972222,
     "lng": -79.38508749972223,
     "datetime": "2026-04-24T15:32:14.000Z",
+    "localDate": "2026-04-24",
     "width": 4000,
     "height": 3000,
     "location": "Toronto, ON"
@@ -15,6 +16,7 @@
     "lat": 43.570239299722225,
     "lng": -79.60296499972222,
     "datetime": "2026-04-24T16:11:38.000Z",
+    "localDate": "2026-04-24",
     "width": 3000,
     "height": 4000,
     "location": "Mississauga, ON"
@@ -25,6 +27,7 @@
     "lat": 43.170452777777776,
     "lng": -80.21499722222222,
     "datetime": "2026-04-24T17:20:52Z",
+    "localDate": "2026-04-24",
     "width": 5712,
     "height": 4284,
     "location": "Brantford, ON"
@@ -35,6 +38,7 @@
     "lat": 42.9870347,
     "lng": -82.37293349999999,
     "datetime": "2026-04-24T18:56:16.000Z",
+    "localDate": "2026-04-24",
     "width": 4000,
     "height": 3000,
     "location": "Sarnia, ON"
@@ -45,6 +49,7 @@
     "lat": 42.99879722222222,
     "lng": -82.42296666666667,
     "datetime": "2026-04-24T19:00:06Z",
+    "localDate": "2026-04-24",
     "width": 5712,
     "height": 3570,
     "location": "Port Huron, MI"
@@ -55,6 +60,7 @@
     "lat": 42.30502222222222,
     "lng": -84.99574166666667,
     "datetime": "2026-04-24T21:57:11Z",
+    "localDate": "2026-04-24",
     "width": 4032,
     "height": 3024,
     "location": "Marshall Township, MI"
@@ -65,6 +71,7 @@
     "lat": 41.733983333333335,
     "lng": -87.56358333333333,
     "datetime": "2026-04-25T00:17:19Z",
+    "localDate": "2026-04-24",
     "width": 4032,
     "height": 3024,
     "location": "Chicago, IL"
@@ -75,6 +82,7 @@
     "lat": 41.82996666666667,
     "lng": -87.64605,
     "datetime": "2026-04-25T00:30:17Z",
+    "localDate": "2026-04-24",
     "width": 4284,
     "height": 5712,
     "location": "Chicago, IL"
@@ -85,6 +93,7 @@
     "lat": 41.888283333333334,
     "lng": -87.62182499999999,
     "datetime": "2026-04-25T02:57:36Z",
+    "localDate": "2026-04-24",
     "width": 3024,
     "height": 4032,
     "location": "Chicago, IL"
@@ -95,6 +104,7 @@
     "lat": 41.890280527777776,
     "lng": -87.61371605833332,
     "datetime": "2026-04-25T18:58:20.000Z",
+    "localDate": "2026-04-25",
     "width": 3000,
     "height": 4000,
     "location": "Chicago, IL"
@@ -105,6 +115,7 @@
     "lat": 41.879525,
     "lng": -87.62593888888888,
     "datetime": "2026-04-25T19:34:17Z",
+    "localDate": "2026-04-25",
     "width": 4284,
     "height": 5712,
     "location": "Chicago, IL"
@@ -115,6 +126,7 @@
     "lat": 40.51778888888889,
     "lng": -88.97403055555556,
     "datetime": "2026-04-26T00:37:23Z",
+    "localDate": "2026-04-25",
     "width": 5712,
     "height": 4284,
     "location": "Normal, IL"
@@ -125,6 +137,7 @@
     "lat": 38.62363333333333,
     "lng": -90.18573888888889,
     "datetime": "2026-04-26T03:44:09Z",
+    "localDate": "2026-04-25",
     "width": 3024,
     "height": 4032,
     "location": "Saint Louis, MO"
@@ -135,6 +148,7 @@
     "lat": 37.94268333333333,
     "lng": -91.79125277777777,
     "datetime": "2026-04-26T07:02:33Z",
+    "localDate": "2026-04-26",
     "width": 4284,
     "height": 5712,
     "location": "Rolla, MO"
@@ -145,6 +159,7 @@
     "lat": 37.95697777777778,
     "lng": -91.78511944444445,
     "datetime": "2026-04-26T07:13:37Z",
+    "localDate": "2026-04-26",
     "width": 4032,
     "height": 3024,
     "location": "Rolla, MO"
@@ -155,6 +170,7 @@
     "lat": 37.24271388888889,
     "lng": -93.26140555555556,
     "datetime": "2026-04-26T08:46:45Z",
+    "localDate": "2026-04-26",
     "width": 5712,
     "height": 4284,
     "location": "Springfield, MO"
@@ -165,6 +181,7 @@
     "lat": 37.18501944444444,
     "lng": -93.5051888888889,
     "datetime": "2026-04-26T17:47:57Z",
+    "localDate": "2026-04-26",
     "width": 5712,
     "height": 4284,
     "location": "Greene County, MO"
@@ -175,6 +192,7 @@
     "lat": 36.62741944444444,
     "lng": -95.19911111111111,
     "datetime": "2026-04-26T19:15:42Z",
+    "localDate": "2026-04-26",
     "width": 4284,
     "height": 5712,
     "location": "Vinita, OK"
@@ -185,6 +203,7 @@
     "lat": 36.147666666666666,
     "lng": -95.97502777777778,
     "datetime": "2026-04-26T22:59:34Z",
+    "localDate": "2026-04-26",
     "width": 5712,
     "height": 4284,
     "location": "Tulsa, OK"
@@ -195,6 +214,7 @@
     "lat": 35.48278888888889,
     "lng": -97.75996388888889,
     "datetime": "2026-04-27T18:13:11Z",
+    "localDate": "2026-04-27",
     "width": 5712,
     "height": 4284,
     "location": "Yukon, OK"
@@ -205,6 +225,7 @@
     "lat": 35.50612777777778,
     "lng": -98.9869,
     "datetime": "2026-04-27T20:48:53Z",
+    "localDate": "2026-04-27",
     "width": 5712,
     "height": 4284,
     "location": "Clinton, OK"
@@ -215,6 +236,7 @@
     "lat": 35.22715,
     "lng": -99.99986944444444,
     "datetime": "2026-04-27T22:05:15Z",
+    "localDate": "2026-04-27",
     "width": 1098,
     "height": 924,
     "location": "Texola, OK"
@@ -225,6 +247,7 @@
     "lat": 35.192099999999996,
     "lng": -101.72354166666666,
     "datetime": "2026-04-27T23:52:33Z",
+    "localDate": "2026-04-27",
     "width": 4032,
     "height": 3024,
     "location": "Amarillo, TX"
@@ -235,6 +258,7 @@
     "lat": 35.17183055555555,
     "lng": -103.7162388888889,
     "datetime": "2026-04-28T03:27:56Z",
+    "localDate": "2026-04-27",
     "width": 4032,
     "height": 3024,
     "location": "Tucumcari, NM"
@@ -245,6 +269,7 @@
     "lat": 35.02734722222222,
     "lng": -107.33546388888888,
     "datetime": "2026-04-28T20:35:30Z",
+    "localDate": "2026-04-28",
     "width": 4032,
     "height": 3024,
     "location": "Mesita, NM"
@@ -255,6 +280,7 @@
     "lat": 35.352672222222225,
     "lng": -109.05698333333333,
     "datetime": "2026-04-28T23:02:04Z",
+    "localDate": "2026-04-28",
     "width": 1555,
     "height": 1089,
     "location": "Lupton, AZ"
@@ -265,6 +291,7 @@
     "lat": 35.083869444444446,
     "lng": -109.78887222222222,
     "datetime": "2026-04-28T23:56:28Z",
+    "localDate": "2026-04-28",
     "width": 4032,
     "height": 3024,
     "location": "Apache County, AZ"
@@ -275,6 +302,7 @@
     "lat": 35.19237777777777,
     "lng": -111.66183333333333,
     "datetime": "2026-04-29T19:59:20Z",
+    "localDate": "2026-04-29",
     "width": 4032,
     "height": 3024,
     "location": "Flagstaff, AZ"
@@ -285,6 +313,7 @@
     "lat": 35.32545555555556,
     "lng": -112.86931666666666,
     "datetime": "2026-04-29T21:22:51Z",
+    "localDate": "2026-04-29",
     "width": 3024,
     "height": 4032,
     "location": "Seligman, AZ"
@@ -295,6 +324,7 @@
     "lat": 35.04673888888889,
     "lng": -114.36463888888888,
     "datetime": "2026-04-30T01:14:54Z",
+    "localDate": "2026-04-29",
     "width": 4032,
     "height": 3024,
     "location": "Mohave County, AZ"
@@ -305,6 +335,7 @@
     "lat": 35.025616666666664,
     "lng": -114.38289722222221,
     "datetime": "2026-04-30T02:11:54Z",
+    "localDate": "2026-04-29",
     "width": 4032,
     "height": 3024,
     "location": "Oatman, AZ"
@@ -315,6 +346,7 @@
     "lat": 34.850902777777776,
     "lng": -114.62316944444444,
     "datetime": "2026-04-30T03:20:11Z",
+    "localDate": "2026-04-29",
     "width": 5712,
     "height": 4284,
     "location": "Needles, CA"
@@ -325,6 +357,7 @@
     "lat": 34.83640277777778,
     "lng": -114.60032777777778,
     "datetime": "2026-04-30T17:56:02Z",
+    "localDate": "2026-04-30",
     "width": 4032,
     "height": 3024,
     "location": "Needles, CA"
@@ -335,6 +368,7 @@
     "lat": null,
     "lng": null,
     "datetime": "2026-04-30T19:18:34.000Z",
+    "localDate": "2026-04-30",
     "width": 4032,
     "height": 3024,
     "location": null
@@ -345,6 +379,7 @@
     "lat": 34.427391666666665,
     "lng": -117.17259166666668,
     "datetime": "2026-04-30T22:48:06Z",
+    "localDate": "2026-04-30",
     "width": 3024,
     "height": 4032,
     "location": "San Bernardino County, CA"
@@ -355,6 +390,7 @@
     "lat": 34.32533333333334,
     "lng": -117.45493333333333,
     "datetime": "2026-04-30T23:20:42Z",
+    "localDate": "2026-04-30",
     "width": 4032,
     "height": 3024,
     "location": "San Bernardino County, CA"
@@ -365,6 +401,7 @@
     "lat": 34.02905,
     "lng": -118.22727222222223,
     "datetime": "2026-05-01T01:00:48Z",
+    "localDate": "2026-04-30",
     "width": 4032,
     "height": 3024,
     "location": "Los Angeles, CA"
@@ -375,6 +412,7 @@
     "lat": 34.00973888888889,
     "lng": -118.4971861111111,
     "datetime": "2026-05-01T03:03:17Z",
+    "localDate": "2026-04-30",
     "width": 4284,
     "height": 5712,
     "location": "Santa Monica, CA"

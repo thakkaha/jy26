@@ -211,7 +211,7 @@ const globalRoute = (() => {
 const dayGroups = (() => {
   const map = {};
   gpsPhotos.forEach((photo, i) => {
-    const day = photo.datetime?.slice(0, 10) ?? 'unknown';
+    const day = photo.localDate ?? photo.datetime?.slice(0, 10) ?? 'unknown';
     if (!map[day]) map[day] = { date: day, photos: [], firstPhotoIdx: i };
     map[day].photos.push(photo);
   });
