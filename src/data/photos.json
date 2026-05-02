@@ -416,5 +416,27 @@
     "width": 4284,
     "height": 5712,
     "location": "Santa Monica, CA"
+  },
+  {
+    "file": "/photos/IMG_7019.jpg",
+    "thumb": "/photos/IMG_7019.thumb.webp",
+    "lat": 35.139963888888886,
+    "lng": -120.64318055555556,
+    "datetime": "2026-05-02T02:17:06Z",
+    "localDate": "2026-05-01",
+    "width": 4032,
+    "height": 3024,
+    "location": "Pismo Beach, CA"
+  },
+  {
+    "file": "/photos/IMG_7057.jpg",
+    "thumb": "/photos/IMG_7057.thumb.webp",
+    "lat": 35.138977777777775,
+    "lng": -120.64301944444445,
+    "datetime": "2026-05-02T03:14:58Z",
+    "localDate": "2026-05-01",
+    "width": 4032,
+    "height": 3024,
+    "location": "Pismo Beach, CA"
   }
 ]
