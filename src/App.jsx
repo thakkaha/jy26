@@ -207,11 +207,25 @@ const globalRoute = (() => {
     : [];
 })();
 
-// Group GPS photos by calendar day
+// Returns the "trip day" key for a photo, applying a 3am cutoff:
+// photos taken between midnight and 2:59am local time count as the previous calendar day.
+function getTripDayKey(photo) {
+  const localDate = photo.localDate ?? photo.datetime?.slice(0, 10) ?? 'unknown';
+  if (!photo.datetime || localDate === 'unknown') return localDate;
+  const hour = new Date(photo.datetime).getHours();
+  if (hour < 3) {
+    const d = new Date(localDate + 'T12:00:00'); // noon avoids DST ambiguity
+    d.setDate(d.getDate() - 1);
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  }
+  return localDate;
+}
+
+// Group GPS photos by trip day (with 3am cutoff)
 const dayGroups = (() => {
   const map = {};
   gpsPhotos.forEach((photo, i) => {
-    const day = photo.localDate ?? photo.datetime?.slice(0, 10) ?? 'unknown';
+    const day = getTripDayKey(photo);
     if (!map[day]) map[day] = { date: day, photos: [], firstPhotoIdx: i };
     map[day].photos.push(photo);
   });
