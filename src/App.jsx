@@ -207,16 +207,36 @@ const globalRoute = (() => {
     : [];
 })();
 
+// Rough UTC offset (hours) for North American longitudes during summer DST.
+// Boundaries follow the approximate midpoints of US timezone zones.
+function naUtcOffset(lng) {
+  if (lng > -87)  return -4; // Eastern (EDT)
+  if (lng > -104) return -5; // Central (CDT)
+  if (lng > -117) return -6; // Mountain (MDT) / Arizona MST (±1h, close enough)
+  return -7;                  // Pacific (PDT)
+}
+
 // Returns the "trip day" key for a photo, applying a 3am cutoff:
 // photos taken between midnight and 2:59am local time count as the previous calendar day.
+// Uses the photo's GPS longitude to determine local time — no browser-timezone dependency.
 function getTripDayKey(photo) {
   const localDate = photo.localDate ?? photo.datetime?.slice(0, 10) ?? 'unknown';
   if (!photo.datetime || localDate === 'unknown') return localDate;
-  const hour = new Date(photo.datetime).getHours();
-  if (hour < 3) {
-    const d = new Date(localDate + 'T12:00:00'); // noon avoids DST ambiguity
-    d.setDate(d.getDate() - 1);
-    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+
+  let localHour;
+  if (photo.datetime.endsWith('Z')) {
+    // True UTC timestamp — derive local hour from GPS longitude
+    const localMs = new Date(photo.datetime).getTime() + naUtcOffset(photo.lng) * 3600000;
+    localHour = Math.floor(localMs % 86400000 / 3600000);
+  } else {
+    // EXIF local time stored without timezone — extract hour directly from the string
+    localHour = parseInt(photo.datetime.slice(11, 13), 10);
+  }
+
+  if (localHour < 3) {
+    const d = new Date(localDate + 'T12:00:00Z'); // UTC noon avoids DST edge cases
+    d.setUTCDate(d.getUTCDate() - 1);
+    return d.toISOString().slice(0, 10);
   }
   return localDate;
 }
