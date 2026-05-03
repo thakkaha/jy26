@@ -216,8 +216,8 @@ function naUtcOffset(lng) {
   return -7;                  // Pacific (PDT)
 }
 
-// Returns the "trip day" key for a photo, applying a 3am cutoff:
-// photos taken between midnight and 2:59am local time count as the previous calendar day.
+// Returns the "trip day" key for a photo, applying a 4am cutoff:
+// photos taken between midnight and 3:59am local time count as the previous calendar day.
 // Uses the photo's GPS longitude to determine local time — no browser-timezone dependency.
 function getTripDayKey(photo) {
   const localDate = photo.localDate ?? photo.datetime?.slice(0, 10) ?? 'unknown';
@@ -233,7 +233,7 @@ function getTripDayKey(photo) {
     localHour = parseInt(photo.datetime.slice(11, 13), 10);
   }
 
-  if (localHour < 3) {
+  if (localHour < 4) {
     const d = new Date(localDate + 'T12:00:00Z'); // UTC noon avoids DST edge cases
     d.setUTCDate(d.getUTCDate() - 1);
     return d.toISOString().slice(0, 10);
