@@ -438,5 +438,27 @@
     "width": 4032,
     "height": 3024,
     "location": "Pismo Beach, CA"
+  },
+  {
+    "file": "/photos/IMG_7108.jpg",
+    "thumb": "/photos/IMG_7108.thumb.webp",
+    "lat": 35.66233888888889,
+    "lng": -121.25605833333333,
+    "datetime": "2026-05-02T20:03:24Z",
+    "localDate": "2026-05-02",
+    "width": 4032,
+    "height": 3024,
+    "location": "San Luis Obispo County, CA"
+  },
+  {
+    "file": "/photos/IMG_7149.jpg",
+    "thumb": "/photos/IMG_7149.thumb.webp",
+    "lat": 35.893005555555554,
+    "lng": -121.461175,
+    "datetime": "2026-05-02T22:37:42Z",
+    "localDate": "2026-05-02",
+    "width": 5712,
+    "height": 4284,
+    "location": "Monterey County, CA"
   }
 ]
