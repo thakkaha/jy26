@@ -2,7 +2,7 @@ name: Sync from Google Drive
 
 on:
   schedule:
-    - cron: '6 */6 * * *'   # every hour
+    - cron: '6 */6 * * *'   # every 6th hour
   workflow_dispatch:
 
 permissions:
