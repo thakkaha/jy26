@@ -153,7 +153,7 @@ function Sidebar({ open, onToggle, selectedDay, onSelectDay, distanceKm, tripTim
 
       <div className="sidebar-footer">
         <div className="sidebar-footer-links">
-          <a href="https://param.me" target="_blank" rel="noopener noreferrer" className="sidebar-desc">param.me</a>
+          <a href="https://1yo.ga" target="_blank" rel="noopener noreferrer" className="sidebar-desc">1yo.ga</a>
           <a
             href="https://github.com/paramt/trip-tracker"
             target="_blank"

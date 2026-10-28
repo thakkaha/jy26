@@ -1,18 +1,17 @@
 // Trip configuration — edit this file to customize for your own trip
 
-export const TRIP_TITLE       = 'Route 66\nRoad Trip Tracker';
-export const TRIP_DESCRIPTION = 'See live updates from my Route 66 road trip as photos from my phone sync and the timeline/map is generated using photo metadata. The plan is:';
-export const PAGE_TITLE       = 'Route 66';
+export const TRIP_TITLE       = 'Jagriti Yatra 26\nTrain Trip Tracker';
+export const TRIP_DESCRIPTION = 'See live updates from Jagriti Yatra 2026 train trip as photos sync and the timeline/map is generated using photo metadata. The plan is:';
+export const PAGE_TITLE       = 'Jagriti Yatra 2026';
 
-export const TRIP_START         = new Date('2026-04-24T16:00:00Z'); // Apr 24 2026 noon EDT
-export const TRIP_END           = new Date('2026-05-04T16:00:00Z'); // May 4 2026 noon EDT
-export const TRIP_DISTANCE_KM   = 6000; // estimated total trip distance (for progress bar)
+export const TRIP_START         = new Date('2026-11-22T16:00:00Z'); // Apr 24 2026 noon EDT
+export const TRIP_END           = new Date('2026-12-08T16:00:00Z'); // May 4 2026 noon EDT
+export const TRIP_DISTANCE_KM   = 8000; // estimated total trip distance (for progress bar)
 
 // Changes the description in the sidebar, has no effect on the actual route
 export const TRIP_LEGS = [
-  { icon: '🚗', label: 'Toronto → Chicago' },
-  { icon: '🛣️', label: 'Chicago → LA', note: 'via Historic Route 66' },
-  { icon: '🌊', label: 'LA → San Francisco', note: 'via the Pacific Coast Highway' },
+  { icon: '✈️', label: 'Toronto → Mumbai' },
+  { icon: '🛣️', label: 'Mumbai → Mumbai', note: 'Historic JY' }
 ];
 
 // Map projection — options:
