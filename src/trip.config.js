@@ -1,6 +1,6 @@
 // Trip configuration — edit this file to customize for your own trip
 
-export const TRIP_TITLE       = 'Jagriti Yatra 26\nTrain Trip Tracker';
+export const TRIP_TITLE       = '<a href="https://jagritiyatra.com/">Jagriti Yatra</a> 26\nTrain Trip Tracker';
 export const TRIP_DESCRIPTION = 'See live updates from Jagriti Yatra 2026 train trip as photos sync and the timeline/map is generated using photo metadata. The plan is:';
 export const PAGE_TITLE       = 'Jagriti Yatra 2026';
 
@@ -11,7 +11,7 @@ export const TRIP_DISTANCE_KM   = 8000; // estimated total trip distance (for pr
 // Changes the description in the sidebar, has no effect on the actual route
 export const TRIP_LEGS = [
   { icon: '✈️', label: 'Toronto → Mumbai' },
-  { icon: '🛣️', label: 'Mumbai → Mumbai', note: 'Historic JY' }
+  { icon: '🛣️', label: 'Mumbai 23 Nov. → Mumbai 8 Dec.', note: 'Historic JY 2026' }
 ];
 
 // Map projection — options:

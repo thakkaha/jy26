@@ -244,6 +244,15 @@ code {
 .sidebar-github-link:hover {
   color: #fff;
 }
+.sidebar-insta-link {
+  display: inline-flex;
+  color: #888;
+  transition: color 0.15s;
+}
+
+.sidebar-insta-link:hover {
+  color: #fff;
+}
 
 .sidebar:not(.sidebar-open) .sidebar-footer {
   opacity: 0;
