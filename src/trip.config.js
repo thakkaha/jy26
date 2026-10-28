@@ -1,6 +1,6 @@
 // Trip configuration — edit this file to customize for your own trip
 
-export const TRIP_TITLE       = 'Jagriti Yatra</a> 26\nTrain Trip Tracker';
+export const TRIP_TITLE       = '2026\nTrain Trip Tracker';
 export const TRIP_DESCRIPTION = 'See live updates from Jagriti Yatra 2026 train trip as photos sync and the timeline/map is generated using photo metadata. The plan is:';
 export const PAGE_TITLE       = 'Jagriti Yatra 2026';
 
