@@ -84,7 +84,7 @@ function Sidebar({ open, onToggle, selectedDay, onSelectDay, distanceKm, tripTim
       </div>
 
       <div className="sidebar-titlebar">
-        <h1 className="sidebar-title"><a href='https://jagritiyatra.com/'>Jagriti Yatra</a>{TRIP_TITLE.split('\n').map((line, i, arr) => <span key={i}>{line}{i < arr.length - 1 && <br />}</span>)}</h1>
+        <h1 className="sidebar-title"><a style='color:#888' target='_blank' href='https://jagritiyatra.com/'>Jagriti Yatra </a> {TRIP_TITLE.split('\n').map((line, i, arr) => <span key={i}>{line}{i < arr.length - 1 && <br />}</span>)}</h1>
       </div>
 
       <div className="sidebar-body">
