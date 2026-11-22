@@ -1,5 +1,16 @@
 [
   {
+    "file": "/photos/PXL_20261119_214842534.jpg",
+    "thumb": "/photos/PXL_20261119_214842534.thumb.webp",
+    "lat": null,
+    "lng": null,
+    "datetime": "2026-11-19T21:48:42.000Z",
+    "localDate": "2026-11-19",
+    "width": 3024,
+    "height": 4032,
+    "location": null
+  },
+  {
     "file": "/photos/PXL_20261122_022752542.jpg",
     "thumb": "/photos/PXL_20261122_022752542.thumb.webp",
     "lat": null,
@@ -15,7 +26,7 @@
     "thumb": "/photos/1F69E_color-mumbai.thumb.webp",
     "lat": 19.075984,
     "lng": 72.87765599999999,
-    "datetime": "2026-11-22T15:11:52",
+    "datetime": "2026-11-22T15:17:33",
     "localDate": null,
     "width": 618,
     "height": 618,
