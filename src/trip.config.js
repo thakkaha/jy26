@@ -4,7 +4,7 @@ export const TRIP_TITLE       = '2026\nTrain Trip Tracker';
 export const TRIP_DESCRIPTION = 'See live updates from Jagriti यात्रा 2026 train trip as photos sync and the timeline/map is generated using photo metadata. The plan is:';
 export const PAGE_TITLE       = 'Jagriti यात्रा 2026';
 
-export const TRIP_START         = new Date('2026-11-22T16:00:00Z'); // Apr 24 2026 noon EDT
+export const TRIP_START         = new Date('2026-11-19T16:00:00Z'); // Apr 24 2026 noon EDT
 export const TRIP_END           = new Date('2026-12-08T16:00:00Z'); // May 4 2026 noon EDT
 export const TRIP_DISTANCE_KM   = 8000; // estimated total trip distance (for progress bar)
 
